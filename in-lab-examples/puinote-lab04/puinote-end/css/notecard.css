@@ -1,0 +1,266 @@
+/* This represents a single notecard. */
+.notecard {
+
+  /* Since this notecard is a flexbox, the children of the notecard will sit
+    on the same line (instead of stacking on top of each other). This allows
+    us to divide the notecard into a left side (main content + footer) and a
+    right side (expand/collapse + toolbar).
+  */
+  display: flex;
+  
+  /* Set default width for the notecard (this will be the width when notecards
+    are all in a single column). For larger screens, we adjust this width, see
+    the @media query below. */
+  /* width: 450px; */
+  width: 100%; 
+  
+  
+  /* Add a margin to the top of the notecard, so that when they are all stacked
+    together, there is a space in between each card. */
+  margin-top: 20px;
+  
+  /* Add some padding, so that there is a buffer zone between the edge of the
+    notecard and the content inside. */
+  padding: 20px;
+  
+  /* Add rounded corners for the notecard. */
+  border-radius: 8px;
+  
+  /* Notecard background is slightly lighter than the webpage background. */
+  background-color: #212121;
+}
+  
+/* For larger screen sizes (769px and above) we change the notecard width. We
+  actually make the notecards a bit smaller, but since we also make the
+  #container element larger, there will now be two notecards per row, instead
+  of just one notecard per row.
+*/
+@media (min-width: 769px) {
+  .notecard {
+    width: 310px;
+  }
+}
+
+/* The right side of the notecard will contain the expand/collpase icon and the
+  toolbar with the edit and delete icons. */
+.notecard-right{
+  /* Make this div a flexbox, so we can more easily position and align the
+    child divs. Note that we've set flex-direction to "column", because we
+    want the child divs (expand/collpase and toolbar) to stack vertically.
+  */
+  display: flex;
+  flex-direction: column;
+
+  /* Set sidebar width to 30px. */
+  width: 30px;
+}
+
+/*  The left side of the notecard will contain the main content and footer. */
+.notecard-left {
+  /* The right side of the notecard only takes 30px of space. For the left side,
+    we set flex-grow to 1, so it will expand and take up the remaining area. */
+  flex-grow: 1; 
+}
+
+/* ---------- NOTECARD LEFT SIDE CONTENTS ----------------------------------- */
+
+
+/* This div contains the note image and note text (title and body). The footer
+is in a separate div. */
+.notecard-main-content {
+  /* This div has two children, "notecard-thumbnail" and "notecard-text". By
+    default, we would like these child elements to be on the same line, so we
+    make the parent element ("notecard-main-content") a flexbox.
+    
+    However! For certain screen sizes (two notecards per row), we would like
+    the "notecard-text" div to be positioned below the "notecard-thumbnail"
+    element (on a a new line). To achieve this, we add the flex-wrap: wrap
+    property, and change the width of the "notecard-text" div with a
+    @media query (see notecard-text style, later in this stylesheet.)
+  */
+  display: flex;
+  flex-wrap: wrap;
+
+  /* Set the minimum height for all notecard content (this is the contracted
+    state). If the content expands beyond 75px (for example, when the user
+    clicks the "expand" icon), the height will adjust automatically. */
+  min-height: 75px;
+  }
+
+  /* TODO: add comments */
+  @media (min-width: 769px) {
+  .notecard-main-content {
+    align-content: flex-start;
+    min-height: 190px;
+  }
+}
+
+
+/* This is the animal image that is displayed on each notecard. */
+.notecard-thumbnail {
+  /* We want our image to fit into a 70x70 px square. */
+  width: 70px;
+  height: 70px;
+
+  /* Image will be positioned so that it covers the entire 70x70 px area. It
+    will be scaled down, but keep the same aspect ratio. Any parts of the image
+    that fall outside of the 70x70 area will be clipped. */
+  object-fit: cover;
+
+  /* Add some rounded corners to the image. */
+  border-radius: 5px;
+}
+
+/* For larger screen sizes, we will use a larger animal image (100x100 px). */
+@media (min-width: 769px) {
+  .notecard-thumbnail {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+/* This div contains the note title text and note body text. */
+.notecard-text {
+  /* The width should be 100% of the parent div, MINUS the width of the
+  70px thumbnail image and the 20px left margin. */
+  width: calc(100% - 70px - 20px);
+
+  /* Add a margin on the left side, so there is some space between the thumbnail
+    image and the note text. */
+  margin-left: 20px;
+
+  /* Alternatively, we could use the flex-grow property. This causes the div to
+    expand so that it takes up the remaining horizontal space in the parent. */
+  /* flex-grow: 1; */
+
+}
+
+/* For larger screens, we want the title and body text to be on a new line,
+    below the animal image. We set the width to be 100% of the parent div. Then,
+    because of the "flex-wrap: wrap" property in the parent
+    (.notecard-main-content), the .notecard-text div is pushed onto a new line.
+*/
+@media (min-width: 769px) {
+  .notecard-text {
+    width: 100%;
+    margin-left: 0px; /* Remove the left margin. */
+  }
+}
+
+
+
+.note-title-container {
+  height: 42px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  display: flex;
+
+}
+@media (min-width: 769px) {
+.note-title-container {
+  height: auto;
+  margin-top: 20px;
+}
+}
+
+
+.note-title {
+font-weight: 500;
+font-size: 18px;
+
+max-height: 100%;
+
+align-self: flex-end;
+
+
+
+overflow: hidden;
+}
+
+
+
+
+.note-body {
+font-weight: 400;
+font-size: 14px;
+color: #939393;
+
+
+overflow: hidden;
+
+max-height: 16px;
+
+}
+
+.expanded .note-body {
+min-height: 36px;
+max-height: none;
+}
+
+@media (min-width: 769px) {
+.expanded .note-body {
+  min-height: 56px;
+}
+}
+
+.notecard-footer {
+margin-top: 15px;
+font-size: 12px;
+color: #595959
+}
+
+/* ---------- NOTECARD RIGHT SIDE CONTENTS----------------------------------- */
+
+
+.toolbar {
+flex-grow: 1;
+
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+}
+
+.notecard .toolbar .icon {
+display: none;
+}
+
+.notecard.expanded .toolbar .icon {
+display: block;
+}
+
+.toolbar .icon {
+width: 25px;
+height: 25px;
+font-size: 25px;
+text-align: center;
+margin-top: 10px;
+vertical-align: middle;
+}
+
+.icon-collapse {
+display: none;
+}
+
+.notecard.expanded .icon-collapse {
+display: block;
+}
+
+.notecard.expanded .icon-expand {
+display: none;
+}
+
+
+.btn-expand-collapse {
+  width: 30px;
+  height: 30px;
+  color: red;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-expand-collapse:hover {
+  background-color: green;
+  color: #dddddd
+}
