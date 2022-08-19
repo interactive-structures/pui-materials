@@ -144,7 +144,7 @@ class Editor {
 	updateEditorImage() {
 		this.animalIndex = (this.animalIndex + 1) % this.animalNames.length;
     const animalName = this.animalNames[this.animalIndex];
-		this.editorImageElement.src = '/assets/warhol-' + animalName + '.png';
+		this.editorImageElement.src = 'assets/warhol-' + animalName + '.png';
 	}
 
 }
