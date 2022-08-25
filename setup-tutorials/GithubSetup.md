@@ -46,8 +46,8 @@ To start, go to the [GitHub Desktop home page](https://desktop.github.com).
 
 |             |                      |
 | ----------- | -------------------- |
-|  **On Mac:** If you have a newer Mac model with an *M1 or M2 chip*, click the link that says *"Download for an Apple silicon Mac."* Otherwise, just click the big purple download button. When it's done downloading, click the download to unzip the file, and view it in the Finder. You should now see the purple icon for GitHub Desktop in your Downloads folder. Drag the icon into the Applications folder for safekeeping, and it should be installed! | <img src="./assets/mac/github-desktop-home.png" alt="Screenshot of GitHub Desktop homepage." width="600px"/> |
-| **On Windows:** Click the big purple button to download. After the download is completed, open the EXE and install it on your system by going through the installation wizzard.  | <img src="./assets/mac/github-desktop-home.png" alt="Screenshot of GitHub Desktop homepage." width="600px"/> | 
+|  **On Mac:** If you have a newer Mac model with an *M1 or M2 chip*, click the link that says *"Download for an Apple silicon Mac."* Otherwise, just click the big purple download button. When it's done downloading, click the download to unzip the file, and view it in the Finder. You should now see the purple icon for GitHub Desktop in your Downloads folder. Drag the icon into the Applications folder for safekeeping, and it should be installed! | <img src="./assets/mac/github-desktop-home.png" alt="Screenshot of GitHub Desktop homepage." width="1000px"/> |
+| **On Windows:** Click the big purple button to download. After the download is completed, open the EXE and install it on your system by going through the installation wizzard.  | <img src="./assets/win/github-desktop-home.png" alt="Screenshot of GitHub Desktop homepage." width="1000px"/> | 
 
 When you open the GitHub Desktop app for the first time, you should see this welcome page:
 

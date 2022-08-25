@@ -40,7 +40,7 @@ https://<github-username>.github.io/<repo-name>
 
 **Important:** Take **your** URL and add it to the description of your repository. 
 
-![Screenshot of the published example homework submission page.](./assets/github-pages-url.png)
+![Screenshot of the published example homework submission page.](./assets/github-pages-url.PNG)
 
 
 When you go to your URL, you should see the published website!
