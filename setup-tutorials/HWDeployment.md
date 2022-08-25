@@ -1,6 +1,6 @@
 # Deploying Homework Assignments
 
-_This tutorial assumes you have set up [GitHub](./setup-tutorials/GithubSetup--Mac.md) and your development environment ([Mac](./setup-tutorials/DeveloperEnvironment--Mac.md) or [Windows](./setup-tutorials/DeveloperEnvironment--Win.md)) correctly. If you haven't, go through those tutorials first!_
+_This tutorial assumes you have set up [GitHub](./GithubSetup.md) and your development environment ([Mac](./DeveloperEnvironment--Mac.md) or [Windows](./DeveloperEnvironment--Win.md)) correctly. If you haven't, go through those tutorials first!_
 
 For the assignments in this class, you will upload all code to a single repository (a.k.a. a folder containing code) in your GitHub account. We'll use a service called GitHub Pages to "serve" that repository as a public website.
 
@@ -38,7 +38,12 @@ Now, to get the URL that your site will be available at, replace `<github-userna
 https://<github-username>.github.io/<repo-name>
 ```
 
-When you go to that URL, you should see the published website!
+**Important:** Take **your** URL and add it to the description of your repository. 
+
+![Screenshot of the published example homework submission page.](./assets/github-pages-url.png)
+
+
+When you go to your URL, you should see the published website!
 
 ![Screenshot of the published example homework submission page.](./assets/github-pages-success.png)
 

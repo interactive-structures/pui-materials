@@ -17,8 +17,9 @@ So, are you ready to set up `git` and GitHub and achieve your version control dr
 ## Make a GitHub Account
 
 You'll need a GitHub account to upload your assignments and code, so let's make one now.
+Note that if you already have a GitHub account and use GitHub pages to host a personal website, you should make another account for the homework assignments. 
 
-Go to [github.com](https://github.com) and click Sign Up in the top right corner.
+Go to [github.com](https://github.com) and click **Sign Up** in the top right corner.
 
 ![Screenshot of GitHub sign up page.](./assets/mac/github-signup.png)
 
@@ -35,6 +36,7 @@ After that's done, you should see this page:
 ![Screenshot of GitHub homepage.](./assets/mac/github-homepage.png)
 
 Alright, on to making GitHub work on your local computer!
+
 
 ## Installing GitHub Desktop
 

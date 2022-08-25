@@ -1,4 +1,4 @@
-# Developer Environment setup
+# Developer Environment setup on MAC
 
 _If you're using a Windows computer, you might want to refer to our [Windows tutorial](./DeveloperEnvironment--Win.md) instead!_
 
