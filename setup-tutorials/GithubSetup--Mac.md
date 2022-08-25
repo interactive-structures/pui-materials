@@ -1,6 +1,4 @@
-# GitHub Setup for Mac Users
-
-_If you're using a Windows computer, you might want to refer to our [Windows tutorial](./GithubSetup--Win.md) instead!_
+# GitHub Setup
 
 ## What is `git`?
 
@@ -44,13 +42,12 @@ Like we mentioned earlier, GitHub Desktop is a nice user interface that lets you
 
 To start, go to the [GitHub Desktop home page](https://desktop.github.com).
 
-![Screenshot of GitHub Desktop homepage.](./assets/mac/github-desktop-home.png)
+|             |                      |
+| ----------- | -------------------- |
+|  **On Mac:** If you have a newer Mac model with an *M1 or M2 chip*, click the link that says *"Download for an Apple silicon Mac."* Otherwise, just click the big purple download button. When it's done downloading, click the download to unzip the file, and view it in the Finder. You should now see the purple icon for GitHub Desktop in your Downloads folder. Drag the icon into the Applications folder for safekeeping, and it should be installed! | <img src="./assets/mac/github-desktop-home.png" alt="Screenshot of GitHub Desktop homepage." width="600px"/> |
+| **On Windows:** Click the big purple button to download. After the download is completed, open the EXE and install it on your system by going through the installation wizzard.  | <img src="./assets/mac/github-desktop-home.png" alt="Screenshot of GitHub Desktop homepage." width="600px"/> | 
 
-If you have a newer Mac model with an M1 or M2 chip, click the link that says "Download for an Apple silicon Mac." Otherwise, just click the big purple download button.
-
-When it's done downloading, click the download to unzip the file, and view it in the Finder. You should now see the purple icon for GitHub Desktop in your Downloads folder. Drag the icon into the Applications folder for safekeeping, and it should be installed!
-
-When you double-click to open the GitHub Desktop app for the first time, you should see this welcome page:
+When you open the GitHub Desktop app for the first time, you should see this welcome page:
 
 ![Screenshot of GitHub Desktop welcome page.](./assets/mac/github-desktop-welcome.png)
 

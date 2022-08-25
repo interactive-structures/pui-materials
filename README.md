@@ -6,15 +6,8 @@ Welcome to PUI! Here are some essential information.
 
 First, set up your system such that you can run examples and solve homework assignments efficiently. We have created step-by-step tutorials for you.
 
-Github setup tutorial:
-
-- [For Mac](./setup-tutorials/GithubSetup--Mac.md)
-- [For Windows](./setup-tutorials/GithubSetup--Win.md)
-
-Development Environment setup:
-
-- [For Mac](./setup-tutorials/DeveloperEnvironment--Mac.md)
-- [For Windows](./setup-tutorials/DeveloperEnvironment--Win.md)
+1. [Github setup tutorial](./setup-tutorials/GithubSetup--Mac.md)
+2. Development Environment setup: [For Mac Users](./setup-tutorials/DeveloperEnvironment--Mac.md) and [for Windows users](./setup-tutorials/DeveloperEnvironment--Win.md)
 
 ## Homework assignments setup and deployment
 

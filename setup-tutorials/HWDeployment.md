@@ -1,6 +1,6 @@
 # Deploying Homework Assignments
 
-_This tutorial assumes you have set up GitHub ([Mac](./setup-tutorials/GithubSetup--Mac.md) or [Windows](./setup-tutorials/GithubSetup--Win.md)) and your development environment ([Mac](./setup-tutorials/DeveloperEnvironment--Mac.md) or [Windows](./setup-tutorials/DeveloperEnvironment--Win.md)) correctly. If you haven't, go through those tutorials first!_
+_This tutorial assumes you have set up [GitHub](./setup-tutorials/GithubSetup--Mac.md) and your development environment ([Mac](./setup-tutorials/DeveloperEnvironment--Mac.md) or [Windows](./setup-tutorials/DeveloperEnvironment--Win.md)) correctly. If you haven't, go through those tutorials first!_
 
 For the assignments in this class, you will upload all code to a single repository (a.k.a. a folder containing code) in your GitHub account. We'll use a service called GitHub Pages to "serve" that repository as a public website.
 
