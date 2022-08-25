@@ -57,7 +57,7 @@ Let's say you complete part of the assignment and you're pretty happy with the r
 
 Be sure that only the files you want to save in this commit are checked in the left sidebar. Then, type a commit message (be descriptive and summarize the changes you made, like "Updated homework text for clarity") and click **Commit to main**.
 
-Now that your changes are committed _locally_, you can "push" them to GitHub, where they will show on your published website. To push, simply press the Push origin button at the top of the GitHub Desktop page:
+Now that your changes are committed _locally_, you have to "push" them to GitHub, where they will show on your published website. To push, simply press the **Push origin** button, either at the top of the GitHub Desktop page or the blue one (both buttons do exactly the same):
 
 ![Screenshot of GitHub Desktop showing the Push origin button at the top.](./assets/github-desktop-push.png)
 
