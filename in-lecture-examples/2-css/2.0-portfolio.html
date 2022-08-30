@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <!-- explain -->
+    <!-- <link rel="stylesheet" href="./2.1-basics-typography.css" type="text/css"/> -->
+    <!-- <link rel="stylesheet" href="./2.2-links.css" type="text/css"/> -->
+    <!-- <link rel="stylesheet" href="./2.3-navigation-selectors.css" type="text/css"/> -->
+    <link rel="stylesheet" href="./2.4-flexbox--final.css" type="text/css"/>
+    <title>Jane Doe's portfolio</title>
+  </head>
+  <body>
+
+    <header>
+        <nav>
+            <a href="#about">About me</a>
+            <a href="#tech">Techy work</a>
+            <a href="#personal">Personal hobbies</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1 >About me</h1>
+            
+            <div id="about-content">
+                <div id="about-image">
+                    <img src="../assets/portrait.jpg" width="200" alt="Portrait of Jane Doe"/>
+                </div>
+                <div id="about-description">
+                    <p id="greeting">
+                        Hi, I am Jane!
+                    </p>
+                    <p> 
+                        My passion is research, building, and teaching at <a href="https://cmu.edu">Carnegie Mellon University.</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h1 id="tech">Techy work</h1>
+
+            <article>
+                <div class="article-description">
+                    <h2>Metamaterial Mechanisms</h2>
+                    <p>Blurring the lines between materials and mechanisms.</p>
+                </div>
+                <div class="article-media">
+                    <video src="../assets/MMM.mp4" width="500" controls>
+                        Video not supported
+                    </video>
+                </div>
+            </article>
+            
+            <article>
+                <div class="article-description">
+                    <h2>Digital Metamaterial</h2>
+                    <p>Embedding decision-making capabilities into materials.</p>
+                </div>
+                <div class="article-media">
+                    <video src="../assets/DMM.mp4" width="500" controls>
+                        Video not supported
+                    </video>
+                </div>
+            </article>
+
+        </section>
+
+        <section>
+            <h1 id="personal">Personal hobbies</h1>
+
+            <h2>Making bread: my favorite recipe</h2>
+            
+            The shortes recipe as follows.
+
+            <h3>Ingredients</h3>
+            <ul>
+                <li>Flour</li>
+                <li>Water</li>
+                <li>Salt</li>
+            </ul>
+
+            <h3>Instructions</h3>
+            <ol>
+                <li>Mix all ingredients in a bowl</li>
+                <li>Let the dough rest for 30min</li>
+                <li>Bake</li>
+            </ol>
+
+        </section>
+    </main>
+
+    <footer>
+        Jane Doe. 2022.
+    </footer>
+</body>
+</html>
