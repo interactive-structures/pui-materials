@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  flex: 0 0 auto;
+}
+
+.name {
+  flex: 1 0 auto;
+}
+
+.footer {
+  display: flex;
+}
+
+.footer-element {
+  flex: 1 0 auto;
+}

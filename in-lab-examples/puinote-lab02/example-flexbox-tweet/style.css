@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+}
+
+.tweet {
+  width: 360px;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.header {
+  width: 100%;
+}
+
+.profile-pic {
+  background-color: salmon;
+  margin-right: 8px;
+  width: 40px;
+  height: 40px;
+}
+
+.tweet-text {
+  padding: 12px 0;
+}
+
+.name {
+  background-color: lightgreen;
+}
+
+.footer {
+  width: 100%;
+  background-color: teal;
+}
+
+.footer-element {
+  background-color: darkgray;
+  color: white;
+  margin: 8px;
+  padding: 4px;
+}
