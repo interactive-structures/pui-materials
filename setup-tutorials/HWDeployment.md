@@ -1,4 +1,4 @@
-# Deploying Homework Assignments
+# Deploying Homework Assignments on GitHub
 
 _This tutorial assumes you have set up [GitHub](./GithubSetup.md) and your development environment ([Mac](./DeveloperEnvironment--Mac.md) or [Windows](./DeveloperEnvironment--Win.md)) correctly. If you haven't, go through those tutorials first!_
 
