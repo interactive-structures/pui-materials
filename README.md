@@ -13,8 +13,8 @@ First, set up your system such that you can run examples and solve homework assi
 
 When you're done setting up your GitHub account and development environment, use this tutorial to set up a repository for all your homework assignments:
 
-- [Homework deployment on GitHub](./setup-tutorials/HWDeployment.md)
-<!-- - [Homework submission on Gradescope](./setup-tutorials/HWSubmission.md) -->
+3. [Homework deployment on GitHub](./setup-tutorials/HWDeployment.md)
+4. [Homework submission on Gradescope](./setup-tutorials/HWSubmission.md)
 
 When you're done, your homework repository will look like [**this example repo**](https://github.com/interactive-structures/teach-pui-example), which is live at [this link](https://interactive-structures.org/teach-pui-example/). You'll be able to add your code to your own repository and have it be visible in your own GitHub Pages site.
 

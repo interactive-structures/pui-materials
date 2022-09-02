@@ -5,7 +5,8 @@ We wil use Gradescope for assignments in this course. For your first submission,
 
 **Add the URL of your website:**
 
-We will need to evaluate your **deployed** website of your homework. In your homework folder, add a README.md or README.txt that contains the URL to the website running online. (We assume that you did the [homework deployment tutorial](./HWDeployment.md) at this point.)
+We will need to evaluate your **deployed** website of your homework. In your repository, add a README.md or README.txt that contains the URL to the website running online, like [this example](https://github.com/interactive-structures/teach-pui-example). 
+(We assume that you did the [homework deployment tutorial](./HWDeployment.md) at this point.)
 
 
 To submit your homework, follow the steps below.
