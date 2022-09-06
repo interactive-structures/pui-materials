@@ -1,0 +1,10 @@
+#myBox {
+  display: flex;
+  padding: 48px;
+  justify-content: center;
+  /*transition: background-color 1s ease-in-out;*/
+}
+
+.red {
+  background-color: red;
+}
