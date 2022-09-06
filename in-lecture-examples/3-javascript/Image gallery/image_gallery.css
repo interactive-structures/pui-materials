@@ -1,0 +1,34 @@
+body {
+    width: 500px;
+}
+
+.thumbnails-container {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.thumbnail {
+    flex: 1 1 auto;
+    width: 1px;
+    /* margin: 5px; */
+    border-radius: 4px;
+}
+.thumbnail:hover {
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+.full-image-container {
+    width: 100%;
+}
+
+#full-image {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#show-reel {
+    width: 100%;
+    margin: auto;
+}

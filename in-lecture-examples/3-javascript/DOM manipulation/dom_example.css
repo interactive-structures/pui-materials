@@ -1,0 +1,15 @@
+p {
+    background-color: lightgray;
+}
+
+.container {
+    background-color: gray;
+    padding: 10px;
+}
+
+.closing {
+    background-color: deepskyblue;
+    color: white;
+    font-weight: 900;
+    padding: 20px;
+}
