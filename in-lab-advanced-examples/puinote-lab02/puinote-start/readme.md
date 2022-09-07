@@ -234,6 +234,7 @@ class Notecard {
 Note that the expand/collapse functionalities only work for the first note now. Why? Because the `querySelector` is selecting the first appearing `.icon-expand` and `.icon-collapse`. These should apply to each notecard item, so let's move these into the class.
 
 Let's move the expand/collapse functionalities into `class Notecard` and modify.
+
 21. Move the `expandNote()` and `collapseNote()` functions into the class.
 ```
 class Notecard {
@@ -314,7 +315,6 @@ selectedNote.noteBody = editorBodyElement.value;
 ```
 selectedNote.updateElement();
 ```
----
 
 ## Deleting a Note
 29. Add `deleteNote()` function to `Notecard` class.
