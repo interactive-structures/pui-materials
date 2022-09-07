@@ -1,0 +1,89 @@
+body {
+  /* Set the default font family and font color for our application. */
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #939393;
+
+  /* Set the background color (dark mode UI!) */
+  background-color: #191919;
+}
+
+
+.notecard {
+  width: 450px;
+  height: 180px;
+  border-radius: 8px;
+  background-color: #212121; 
+  margin: 100px auto 0px auto;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+}
+
+.notecard-left {
+  width: auto;
+  flex-grow: 1;
+}
+
+.notecard-right {
+  margin-left: auto;
+  width: 30px;
+  flex-shrink: 0;
+}
+
+.note-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.note-body {
+  font-size: 14px;
+  font-weight: 400;
+  color: #939393;
+}
+
+.notecard-main-content {
+  display: flex;
+}
+
+.notecard-thumbnail {
+  width: 70px;
+  height: 70px;
+
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.notecard-text {
+  margin-top: 26px;
+  margin-left: 20px;
+}
+
+.notecard-title {
+  margin-bottom: 10px;
+}
+
+.notecard-footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #595959;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #595959;
+}
+
+.icon-collapse {
+  display: none;
+}
+
+.icon:hover {
+  color: #dddddd;
+  background-color: #393939;
+  border-radius: 5px;
+  cursor: pointer;
+}
