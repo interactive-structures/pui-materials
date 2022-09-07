@@ -1,0 +1,192 @@
+/* ---------- BODY ---------------------------------------------------------- */
+
+body {
+  /* Some browsers (like Chrome) include a small margin around the <body> by
+    default. Our application doesn't need this margin (we would like the UI to
+    extend all the way to the top and bottom of the screen), so we remove this
+    margin below.
+  */
+  margin: 0px;
+  padding: 0px;
+
+  /* Set the default font family and font color for our application. */
+  font-family: 'Roboto';
+  color: #dddddd;
+
+  /* Set the background color (dark mode UI!) */
+  background-color: #191919;
+}
+
+/* ---------- CONTAINER ----------------------------------------------------- */
+
+/* The #container div holds all of elements. This makes responsive designs
+    easier to implement, since we can resize the container and many of the
+    child elements will adapt automatically. In our design, the header and
+    footer are both children of the #container div, though this is not always
+    the case in practice (some web designers choose to have these elements
+    outside of the container).
+*/
+#container {
+  /* By default, our container is 490px wide. (We will change this for larger
+    screens, see @media query below. */
+  width: 490px;
+
+  /* Set top and bottom margins to 0px. Set left and right margins to "auto",
+    which will center our container div within the page. */
+  margin: 0px auto;
+
+  /* padding: 0px 20px; */
+}
+
+/* For screens that have a width of 769px or above (laptops/desktops), apply
+    this rule... */
+@media (min-width: 769px) {
+  /* For larger screens (bigger than tablets) we expand the container width. */
+  #container {
+    width: 720px;
+  }
+}
+
+/* For screens that have a width of 520px or below (mobile) apply this rule: */
+@media (max-width: 520px) {
+  #container {
+    width: auto;
+    padding: 0px 20px;
+  }
+}
+
+/* ---------- HEADER -------------------------------------------------------- */
+
+/* This element contains our logo image and header text. It is fixed at the
+    top of the screen. */
+header {
+  /* Set display to flex. Since the header is a flexbox element, and the default
+    flow is horizontal, both of its children (logo image and header text) will
+    sit on the same line.
+  */
+  display: flex;
+
+  width: inherit; /* Copy the width value from parent element (#container). */
+  height: 100px;
+
+  /* Set position to "fixed" so that when the user scrolls, the header element
+    stays in the same location. */
+  position: fixed;
+  top: 0px; /* Position this element at the top of the screen. */
+
+  /* Vertically center all child elements (the logo image and header text). */
+  align-items: center;
+
+  /* Choose the same background color as the rest of the page. When user scrolls
+    up, the notecards will be hidden behind this header div. (With no background
+    color, the background would be transparent and we would see the notecards.)
+  */
+  background-color: #191919;
+}
+
+@media (max-width: 520px) {
+  header {
+    width: calc(100% - 40px);
+  }
+}
+
+/* This rule applies to <h1> elements that are children of <header>. (In other
+    words, our "PUI-NOTE" header text.)
+*/
+header h1 {
+  /* Add a margin so that our header text is not directly next to the logo. */
+  margin-left: 5px;
+
+  /* Set the font for the header text. First the browser will try to use
+    'Roboto Mono'. (This is a font from Google Fonts, which we include in
+    index.html.) If 'Roboto Mono' can't be retrieved, the browswer will try
+    to 'Courier New'. If that fails, it will use the default monospace font.
+  */
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: 200; /* Font weights go from 100 (lightest) to 900 (boldest) */
+  font-style: italic;
+}
+
+/* This is our yellow logo image (pencil in a box). */
+#logo-img {
+  /* By default, our logo image is pretty big! Scale it down to 28x28 px. */
+  width: 28px;
+  height: 28px;
+}
+
+/* ---------- NOTECARDS ----------------------------------------------------- */
+
+/* This div contains all of our notecards. */
+#notecard-list {
+
+  /* Our #notecard-list is a flexbox. This means that by default, the browser
+    will try to shove all of the child elements (notecards) on the same line,
+    even if it means shrinking the width of the elements. But! Since we set the
+    flex-wrap property to 'wrap', the browser will instead place overflowing
+    elements on a new line, which is what we want.
+
+    As a result, for laptop/desktop screens, we will have two notecards per
+    line, tablet-sized screens, we will have one notecard per line.
+  */ 
+  display: flex;
+  flex-wrap: wrap;
+
+  /* Add a margin at the top, so that when the user scrolls to the top of the
+    page, the notecards are note covered up by the header element. */
+  margin-top: 100px;
+
+  /* Add an extra margin on the bottom, so that when a user scrolls to the
+      end of the page, the notecards are not covered up by the "START A NEW
+      NOTE" button.
+  */
+  margin-bottom: 120px;
+
+  /* The following two properties are relevant when there are multiple notecards
+    on each row (larger screens): */
+
+  /* All "extra space" in the row should go in-between the notecard elements (no
+    space at the edges of parent div). */
+  justify-content: space-between;
+
+  /* Within each row, the top of the notecards should be aligned. (Notecards
+    may have different heights when they are expanded.) If we set this
+    property to "flex-end" then notecards would be aligned at the bottom edge.
+    If we set to "center", then they would be aligned at the middle. */
+  align-items: flex-start;
+}
+
+/*
+  (See notecard.css)
+  To keep things organized, the notecard styles are in a separate file.
+*/
+
+
+/* ---------- NOTE EDITOR PANEL --------------------------------------------- */
+
+/*
+  (See editor.css)
+  To keep things organized, the note editor styles are in a separate file.
+*/
+
+
+/* ---------- ICONS (NOTECARDS AND EDITOR) ---------------------------------- */
+
+/* TODO: Add comments */
+.icon {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #595959;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+/* TODO: Add comments */
+.icon:hover {
+  color: #dddddd
+}
+
+
+
