@@ -195,7 +195,7 @@ Now we have the notecard list!
 
 Let's copy over our note editor to `App.js` as well.
 
-16. In `App.js`, add the following code from Lab 2 inside the container. Note again that we use `className` instead of `class`. Also, I added the `edit-mode` class to `#note-editor` to make it visible since we don't have any interactivity yet.
+16. In `App.js`, add the following code from Lab 2 inside the container. Note again that we use `className` instead of `class`. We also use `maxLength` instead of `maxlength`. Also, I added the `edit-mode` class to `#note-editor` to make it visible since we don't have any interactivity yet.
 
 ```
 <div id="note-editor" className="edit-mode">
