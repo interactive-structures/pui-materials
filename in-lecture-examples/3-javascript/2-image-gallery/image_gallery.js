@@ -9,6 +9,9 @@ function onThumbnailClick(event) {
     setFullImage(event.target.src, event.target.alt);
 }
 
+function onMouseMove(event) {
+    console.log(event);
+}
 
 /* Declaring the array of image filenames and their alt text */
 const galleryPath = "../../assets/gallery/";
@@ -46,3 +49,5 @@ for (const image of images) {
     //listen to when the thumbnail is clicked, then excecute the function "onThumbnailClick()"
     thumbnailImage.addEventListener('click', onThumbnailClick);
 }
+
+document.querySelector(".full-image-container").addEventListener('mousemove', onMouseMove);
