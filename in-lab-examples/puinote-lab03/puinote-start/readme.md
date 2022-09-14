@@ -13,7 +13,7 @@ In this lab exercise, we will:
 
 ## Setup
 
-You can download a zip file with all starter code and assets here:
+You can download a zip file with all starter code and assets here: https://tinyurl.com/pui-lab03
 
 **Our task:** The user should be able to type a note title and note body in the text boxes onscreen. When they click the "check" button at the bottom of the page, the notecard element should update with the new title and body text.
 
