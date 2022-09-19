@@ -1,0 +1,25 @@
+console.log("start application");
+
+function updateElement() {
+    console.log("running the updateElement function");
+    const noteImageElement = document.querySelector('.notcard-thumbnail')
+    noteImageElement.src = notecard.noteImageURL;
+    const noteTitleElement = document.querySelector('.note-title');
+    noteTitleElement.innerText = notecard.noteTitle;
+    const noteBodyElement = document.querySelector('.note-body');
+    noteBodyElement.innerText = notecard.noteBody;
+}
+
+const notecard = {
+    noteTitle:'This is the title of the note',
+    noteBody: 'Here is the body of the note',
+    noteImageURL: 'assets/warhol-frog.png'
+
+}
+
+function submitNote() {
+    const editorTitleElement = document.querySelector('#note-editor-title');
+    const editorBodyElement = document.querySelector('#note-editor-body');
+    notecard.noteTitle = editorTtileElement.value;
+    notecard.noteBody = editorBodyElement.value;
+}

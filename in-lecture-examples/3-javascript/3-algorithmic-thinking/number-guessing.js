@@ -24,11 +24,13 @@ function checkGuess() {
     if (userGuess === randomNumber) {
         lastResult.textContent = 'Congratulations! You got it right!';
         lastResult.style.backgroundColor = 'green';
+        console.log(lowOrHi);
         lowOrHi.textContent = '';
         setGameOver();
     } else if (guessCount === 10) {
         lastResult.textContent = '!!!GAME OVER!!!';
         lowOrHi.textContent = '';
+        
         setGameOver();
     } else {
         lastResult.textContent = 'Wrong!';
