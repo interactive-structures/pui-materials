@@ -10,11 +10,9 @@ function updateElement() {
 
 
 function submitNote() {
-  // const editorImageElement = document.querySelector('#note-editor-image');
 	const editorTitleElement = document.querySelector('#note-editor-title');
 	const editorBodyElement = document.querySelector('#note-editor-body');
 
-  // notecard.noteImageURL = editorImageElement.src;
   notecard.noteTitle = editorTitleElement.value;
   notecard.noteBody = editorBodyElement.value;
 
@@ -34,6 +32,6 @@ const notecard =
 
 notecard.element = document.querySelector('#notecard-one');
 
-const btnSubmit = document.querySelector('#note-editor .icon-done');
+const btnSubmit = document.querySelector('#btn-submit');
 
 btnSubmit.onclick = submitNote
