@@ -2,7 +2,7 @@ console.log("start application");
 
 function updateElement() {
     console.log("running the updateElement function");
-    const noteImageElement = document.querySelector('.notcard-thumbnail');
+    const noteImageElement = document.querySelector('.notecard-thumbnail');
     noteImageElement.src = notecard.noteImageURL;
     const noteTitleElement = document.querySelector('.note-title');
     noteTitleElement.innerText = notecard.noteTitle;
@@ -20,7 +20,7 @@ const notecard = {
 function submitNote() {
     const editorTitleElement = document.querySelector('#note-editor-title');
     const editorBodyElement = document.querySelector('#note-editor-body');
-    notecard.noteTitle = editorTtileElement.value;
+    notecard.noteTitle = editorTitleElement.value;
     notecard.noteBody = editorBodyElement.value;
     updateElement();
 }
