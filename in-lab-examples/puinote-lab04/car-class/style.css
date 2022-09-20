@@ -1,0 +1,19 @@
+.car {
+  background-color: red;
+  border-radius: 8px;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 24px;
+  width: 400px;
+  height: 80px;
+  margin: 48px;
+  padding: 96px;
+  text-align: center;
+
+  /* When we use JavaScript, we can use transitions to animate changes in appearance! */
+  /* transition: background-color 2s linear; */
+}
+
+.moving-car {
+  background-color: darkorange;
+}
