@@ -2,29 +2,267 @@
 
 ## Introduction
 
+This week, we will give users the ability to *delete* notes from our note-taking application (by clicking on the trash can icon). See an example here: https://interactive-structures.org/teach-pui/in-lab-examples/puinote-lab04/puinote-end/
+
 In this lab exercise, we will:
 - Create a JavaScript `class` that represents a generic notecard, and allows us to make multiple notecards
 - Understand the JavaScript `this` keyword
 - Write a function that removes HTML elements (i.e. notecards)
 - (Bonus) Extract key/value pairs from a URL, and use them to modify a page
 
+## Setup and Recap (Accessing DOM Elements)
 
-## in-progress notes
+1. Download the starter code here: 
 
-- introduce classes. start from lab 3 notecard object, and rewrite as class
-- include footer as well (actually go back to lab 3 and just insert footer from beginning)
-- pass element id as well
-- create new notecard (notecardOne) and examine in console
-- add updateelement function into notecard class
-- in console, manually do updateelement
-- then back in JS, add a call to updateelement in the constructor
-- add the delete function
-- in console, have students call delete function manually
-- connect delete button to delete function
-- note that "this" is now a problem, introduce func bind
-- add expand and contract functions, trigger manually in browser
-- go back to html, find those expand and collapse butttons
-- attach functions to buttons
-- add the second card
-- add the third card
-- bonus (urlparams)
+2. Let's familiarize ourselves with some relevant elements and classes that are used in this application. (It's a good idea to view each of these elements in the developer console by right-clicking and selecting "Inspect").
+
+    - The `.notecard` class refers to our notecard element. Currently, there are three of them on the page. Each notecard has a unique ID (`#notecard-one`, `#notecard-two`, `#notecard-three`). Inside each notecard, we have:
+
+        - `.notecard-thumbnail`, referring to the thumbnail image.
+        - `.note-title`, referring to the title of the note.
+        - `.note-body`, referring to the body text of the note.
+        - `.notecard-footer`, referring to the timestamp at the bottom of the notecard.
+
+    - There are also three icons in the sidebar of each notecard. For now, we are only concerned with the trash can, which has the class `.icon-delete`.
+
+3. Recap: How do we access these elements using JavaScript? In the console, use `querySelector` find the second notecard.
+
+```
+document.querySelector('#notecard-two');
+```
+
+4. Recap: How would we access the title text of the second note card?
+
+```
+// Method One:
+notecardTwo.querySelector('#notecard-two .note-title')
+
+// Method Two:
+const notecardTwo = document.querySelector('#notecard-two');
+notecardTwo.querySelector('.note-title')
+```
+
+5. Recap: How would we access the trash can icon of the third note card?
+
+```
+// Method One:
+notecardTwo.querySelector('#notecard-three .icon-delete')
+
+// Method Two:
+const notecardThree = document.querySelector('#notecard-three');
+notecardThree.querySelector('.icon-delete')
+```
+
+---
+
+## A Notecard Class
+
+In Lab 3, we created an object to hold information for a specific notecard. It looked like this:
+
+```
+const notecard =
+{
+  noteTitle: 'This is the Title of the Note!',
+  noteBody: 'And here is the body of the note.',
+  noteImageURL: 'assets/warhol-frog.png',
+};
+```
+
+This was useful, but what if we have many notecards? In this lab, we will create a `Notecard` class that will allow us to create multiple notecard objects.
+
+6. In `app.js`, create a new `Notecard` class. In the constructor, add `imageURL`, `title`, and `body` as arguments.
+```
+class Notecard {
+
+  constructor(imageURL, title, body) {
+    console.log('Create a new notecard!');
+  }
+}
+```
+
+7. Save your file. In the developer console, test out this new class by trying to create a new notecard.
+```
+const notecardOne = new Notecard('test-image', 'test-title', 'test-body');
+```
+
+A new notecard object has been created!
+
+8. In the console, try to access some properties of the notecard. (`notecardOne.title`, `notecardOne.body`). You should notice that they are undefined – we passed some arguments to the constructor function, but we still haven't assigned any properties to this object.
+
+9. Update the constructor function:
+```
+constructor(imageURL, title, body) {
+    console.log('Create a new notecard!');
+    this.noteImageURL = imageURL;
+    this.noteTitle = title;
+    this.noteBody = body;
+}
+```
+The `this` keyword refers to the notecard object that the constructor function creates.
+
+10. In the developer console, try creating a notecard again. You should now be able to acess the properties of the notecard.
+
+```
+const notecardOne = new Notecard('test-image', 'test-title', 'test-body');
+notecardOne.noteImageURL;
+notecardOne.noteTitle;
+notecardOne.noteBody;
+```
+
+11. In `app.js` create three notecard objects (which will eventually correspond to our three notecards onscreen):
+```
+const notecardOne = new Notecard(
+  'assets/warhol-frog.png',
+  'This is the First Note',
+  'Here is some body text for the first note.'
+)
+
+const notecardTwo = new Notecard(
+  'assets/warhol-orangutan.png',
+  'This is the Second Note',
+  'And here is some body text for the second note! What could be next?'
+)
+
+const notecardThree = new Notecard(
+  'assets/warhol-eagle.png',
+  'This is the Third Note',
+  'Yep, you guessed it, here is some body text for the third note.'
+)
+```
+
+12. In the developer console, notice that you can now access the properties of each notecard object.
+
+---
+
+
+## Updating the DOM Elements
+
+Right now, the information in our `Notecard` objects does not match what we're seeing onscreen in the browser. Recall that in Lab 3, we fixed this by creating a function called `updateElement`, which updated the HTML appropriately.
+
+13. Add a method to the `Notecard` class called `updateElement`.
+
+```
+class Notecard {
+
+    constructor(imageURL, title, body) {
+        this.noteImageURL = imageURL;
+        this.noteTitle = title;
+        this.noteBody = body;
+    }
+
+    updateElement() {    
+        console.log('Updating HTML!')
+    }
+}
+```
+
+14. For now, we will only worry about updating `#notecard-one`. (We will fix this in a moment.) How do we update the title text of `#notecard-one`?
+```
+updateElement() {
+    console.log('Updating HTML!')
+    
+    // first, find the notecard that we want to update
+    const element = document.querySelector('#notecard-one');
+    
+    // then, search within the notecard to find the title element
+    const noteTitleElement = element.querySelector('.note-title');
+
+    // then, update the title HTML
+    noteTitleElement.innerText = this.noteTitle;
+}
+```
+
+15. In the developer console, try calling this function. What do you expect to happen? What happens?
+```
+notecardOne.updateElement();
+notecardTwo.updateElement();
+notecardThree.updateElement();
+```
+
+16. To solve this, we need to link the HTML `.notecard` elements to their corresponding `Notecard` objects in JavaScript. One way to do this is by adding a parameter to the `Notecard` constructor function:
+
+```
+constructor(imageURL, title, body, elementID) {
+    this.noteImageURL = imageURL;
+    this.noteTitle = title;
+    this.noteBody = body;
+
+    this.element = document.querySelector(elementID);
+}
+```
+
+17. Let's update our notecard creation code to include this new parameter:
+
+```
+const notecardOne = new Notecard(
+  'assets/warhol-frog.png',
+  'This is the First Note',
+  'Here is some body text for the first note.',
+  '#notecard-one'
+)
+
+const notecardTwo = new Notecard(
+  'assets/warhol-orangutan.png',
+  'This is the Second Note',
+  'And here is some body text for the second note! What could be next?',
+  '#notecard-two'
+)
+
+const notecardThree = new Notecard(
+  'assets/warhol-eagle.png',
+  'This is the Third Note',
+  'Yep, you guessed it, here is some body text for the third note.',
+  '#notecard-three'
+)
+```
+
+18. Go to the developer console. You should see that by typing `notecardTwo.element` (or similar) the appropriate notecard is now selected.
+
+19. Modify the `updateElement` function to use this new property. Note that we access the "element" property using the `this` keyword (i.e. `this.element`):
+```
+updateElement() {    
+    const noteTitleElement = this.element.querySelector('.note-title');
+
+	noteTitleElement.innerText = this.noteTitle;
+}
+```
+
+20. Add a call to `updateElement` at the end of the constructor function, so we don't have to call the function manually in the console. Notice that again, we use the `this` keyword:
+
+```
+constructor(imageURL, title, body, elementID) {
+    this.noteImageURL = imageURL;
+    this.noteTitle = title;
+    this.noteBody = body;
+
+    this.element = document.querySelector(elementID);
+
+    this.updateElement();
+}
+```
+
+21. Save your file and view the application in the browser. All three note titles should be updated.
+
+22. How do we update the image and body text? Modify the `updateElement` function to include these as well:
+```
+updateElement() {    
+    const noteImageElement = this.element.querySelector('.notecard-thumbnail');
+    const noteTitleElement = this.element.querySelector('.note-title');
+    const noteBodyElement = this.element.querySelector('.note-body');
+
+    noteImageElement.src = this.noteImageURL;
+    noteTitleElement.innerText = this.noteTitle;
+    noteBodyElement.innerText = this.noteBody;
+}
+```
+
+The notecards onscreen should now match the notecard in your code!
+
+
+---
+
+## Deleting Notecards
+
+Finish this!
+
+---
