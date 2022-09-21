@@ -28,12 +28,7 @@ function displayCar(car) {
   carInfoElement.innerText = car.description;
 }
 
-// When the page loads, find the select element.
-let selectElement = document.querySelector('#car-select');
-
-// Give it an onchange listener, which is a function that will run
-// when the selected option changes.
-selectElement.onchange = function () {
+function onSelectValueChange() {
   // In this function, `this` corresponds to the select
   // element. So `this.value` will contain the value of the
   // selected option as a string.
@@ -47,7 +42,15 @@ selectElement.onchange = function () {
 
   // Update the UI
   displayCar(carToDisplay);
-};
+}
+
+// When the page loads, find the select element.
+let selectElement = document.querySelector('#car-select');
+
+// Give it a listener for the 'change' event, which is a function that will run
+// when the selected option changes. You could also do this by setting the
+// onchange property of selectElement, e.g. selectElement.onchange = ...
+selectElement.addEventListener('change', onSelectValueChange);
 
 // Initially, display the first car
 displayCar(allCars[0]);
