@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Notecard from './Notecard';
+import HookExample from './HookExample';
 
 class App extends Component {
   constructor(props) {
@@ -28,14 +29,43 @@ class App extends Component {
           noteBody: "Yep, you guessed it, here is some body text for the third note." ,
           noteCategory: "Work",
           noteFooter: "Sep 1 2022, 10:25"
-        }
+        },
+        {
+          imageURL: "assets/warhol-frog.png",
+          noteTitle: "This is the First Note",
+          noteBody: "Here is some body text for the first note.",
+          noteCategory: "Work",
+          noteFooter: "Sep 1 2022, 10:25"
+        },
+        {
+          imageURL: "assets/warhol-orangutan.png" ,
+          noteTitle: "This is the Second Note" ,
+          noteBody: "And here is some body text for the second note! What could be next?",
+          noteCategory: "Leisure",
+          noteFooter: "Sep 1 2022, 10:25"
+        },
+        {
+          imageURL: "assets/warhol-eagle.png" ,
+          noteTitle: "This is the Third Note" ,
+          noteBody: "Yep, you guessed it, here is some body text for the third note." ,
+          noteCategory: "Work",
+          noteFooter: "Sep 1 2022, 10:25"
+        },        
       ],
       
       selectedNoteIndex: null,
       editorNoteTitle: "",
       editorNoteBody: "",
       isEditing: false,
+      filterCategory: null, 
     }
+  }
+
+  filterButtonHandler = (category) => {
+    this.setState(prevState => ({
+      ...prevState,
+      filterCategory: category
+    }))
   }
 
   editButtonHandler = (noteIndex) => {
@@ -44,13 +74,42 @@ class App extends Component {
       selectedNoteIndex: noteIndex,
       editorNoteTitle: this.state.notecardData[noteIndex].noteTitle,
       editorNoteBody: this.state.notecardData[noteIndex].noteBody,
-      isEditing: true
+      isEditing: true,
     }))
   };
 
   removeButtonHandler = (noteIndex) => {
     const newNotecardData = this.state.notecardData;
     newNotecardData.splice(noteIndex, 1);
+    this.setState(prevState => ({
+      ...prevState,
+      notecardData: newNotecardData
+    }))
+    // let numberlist = [1, 2, 3];
+    // numberlist.splice(0, 1);
+    // // [2, 3]
+    // numberlist.splice(0, 2);
+    // // [3]
+    // numberlist.splice(1, 1);
+    // // [1, 3]
+    // numberlist.splice(1, 2);
+    // // [1]
+
+    // numberlist.splice(0, 1, 4);
+    // // [4, 2, 3]
+  }
+
+  addNote = () => {
+    let newNotecardItem = {
+      imageURL: "assets/warhol-butterfly.png",
+      noteTitle: "This is a brand new Note",
+      noteBody: "Here is some body text for the new note.",
+      noteCategory: "Leisure",
+      noteFooter: "Sep 1 2022, 10:25"
+    }
+
+    let newNotecardData = this.state.notecardData
+    newNotecardData.push(newNotecardItem)
     this.setState(prevState => ({
       ...prevState,
       notecardData: newNotecardData
@@ -68,7 +127,7 @@ class App extends Component {
         editorNoteTitle: "",
         editorNoteBody: "",
         selectedNoteIndex: null,
-        isEditing: false
+        isEditing: false,
       }))
     }
   }
@@ -90,6 +149,13 @@ class App extends Component {
   }
 
   render() {
+    const buttonStyle = {
+      width: "100px",
+      height: "40px",
+      borderRadius: "18px",
+      backgroundColor: "white",
+      fontColor: "black"
+    }
     return (
       <div className="App">
         <div id="container">
@@ -97,20 +163,26 @@ class App extends Component {
             <img id="logo-img" src="assets/pen-to-square-solid.svg" />
             <h1> PUI-NOTE </h1>
           </header>
-          <div>
           <div id="notecard-list">
-            {this.state.notecardData.map((notecard, idx) => {
-              return <Notecard 
-                key={idx}
-                noteIndex={idx}
-                imageURL={notecard.imageURL}
-                noteTitle={notecard.noteTitle}
-                noteBody={notecard.noteBody}
-                noteCategory={notecard.noteCategory}
-                noteFooter={notecard.noteFooter}
-                onEdit={this.editButtonHandler}
-                onRemove={this.removeButtonHandler} />;
-            })}
+            {this.state.notecardData.map(
+              (notecard, idx) => {
+                if ((this.state.filterCategory == null) || 
+                (notecard.noteCategory.includes(this.state.filterCategory))) {
+                  return <Notecard 
+                  key={idx}
+                  noteIndex={idx}
+                  imageURL={notecard.imageURL}
+                  noteTitle={idx < 3 ? notecard.noteTitle : notecard.noteTitle + " 2"}
+                  noteBody={notecard.noteBody}
+                  noteCategory={notecard.noteCategory}
+                  noteFooter={notecard.noteFooter}
+                  onEdit={this.editButtonHandler}
+                  onRemove={this.removeButtonHandler} />
+                } else {
+                  return <div />
+                }
+              }
+            )}
           </div>
 
           {this.state.isEditing &&
@@ -137,7 +209,14 @@ class App extends Component {
               </div>
             </div>
           }
-          </div>
+          
+          {/* Extra examples for filtering and adding a new note */}
+          <p>Show Category:</p>
+          <button style={buttonStyle} onClick={() => {this.filterButtonHandler("Work")}}>Work</button>
+          <button style={buttonStyle} onClick={() => {this.filterButtonHandler("Leisure")}}>Leisure</button>
+          <button style={buttonStyle} onClick={() => {this.filterButtonHandler(null)}}>All</button>
+          <p>Add a New Note</p>
+          <button style={buttonStyle} onClick={() => {this.addNote()}}>New</button>
         </div>
       </div>
     );

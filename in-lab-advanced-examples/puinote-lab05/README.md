@@ -287,24 +287,98 @@ borderColor: this.props.noteCategory == "Work" ? "blue" : "green",
 ```
 
 
+
 -----
-## Using `styled-components`
 
-20. First install `styled-components` to your project by running the following command in terminal:
+## Bonus 1: Filtering Notes By Category 
 
-```
-npm install --save styled-components
-```
+Now that we have a category for each notecard. We can filter notecards by category.
 
-21. Import styled-components and create a styled div.
+20. Let's create a state variable `filterCategory` to keep track of which category to look for. Let's initialize with `null`.
 
 ```
-import styled from 'styled-components';
+this.state = {
+  ...
+  filterCategory: null, 
+}
+```
+
+21. Create a filter button handler.
+
+```
+filterButtonHandler = (category) => {
+  this.setState(prevState => ({
+    ...prevState,
+    filterCategory: category
+  }))
+}
+```
+
+22. Create buttons to change the current filter inside `render()`. Clicking the "All" button resets the filter category to `null`, the initial state.
+
+```
+<p>Show Category:</p>
+<button style={buttonStyle} onClick={() => {this.filterButtonHandler("Work")}}>Work</button>
+<button style={buttonStyle} onClick={() => {this.filterButtonHandler("Leisure")}}>Leisure</button>
+<button style={buttonStyle} onClick={() => {this.filterButtonHandler(null)}}>All</button>
+```
+
+23. Show the list items conditionally based on the current filter category or show all if `null`.
+
+```
+{this.state.notecardData.map(
+  (notecard, idx) => {
+    if ((this.state.filterCategory == null) || 
+    (notecard.noteCategory.includes(this.state.filterCategory))) {
+      return <Notecard 
+      key={idx}
+      noteIndex={idx}
+      imageURL={notecard.imageURL}
+      noteTitle={idx < 3 ? notecard.noteTitle : notecard.noteTitle + " 2"}
+      noteBody={notecard.noteBody}
+      noteCategory={notecard.noteCategory}
+      noteFooter={notecard.noteFooter}
+      onEdit={this.editButtonHandler}
+      onRemove={this.removeButtonHandler} />
+    } else {
+      return <div />
+    }
+  }
+)}
+``` 
+
+-----
+## Bonus 2: Adding a Notecard to the Cart
+
+We can delete a notecard but cannot generate a new one. Let's add a simple button to add a new note.
+
+24. Add a new button markup in `render()` with a not-yet-defined `this.addNote()` handler.
+
+```
+<p>Add a New Note</p>
+<button style={buttonStyle} onClick={() => {this.addNote()}}>New</button>
+```
+
+25. Implement the `addNote` handler.
 
 
 ```
+addNote = () => {
+  let newNotecardItem = {
+    imageURL: "assets/warhol-butterfly.png",
+    noteTitle: "This is a brand new Note",
+    noteBody: "Here is some body text for the new note.",
+    noteCategory: "Leisure",
+    noteFooter: "Sep 1 2022, 10:25"
+  }
 
+  let newNotecardData = this.state.notecardData
+  newNotecardData.push(newNotecardItem)
+  this.setState(prevState => ({
+    ...prevState,
+    notecardData: newNotecardData
+  }))
+}
+```
 
-- Add note
-- styled-components, inline styles
-- router?
+Now clicking the New button adds a new note. You can use the editor to modify the content of the new notecard!
