@@ -9,7 +9,7 @@ In this lab exercise, we will:
 
 ## Setup and Recap
 
-1. Download the zip file with the starter code here:
+1. Download the zip file with the starter code here: https://tinyurl.com/pui-lab05
 
 2. Start by creating a `Notecard` class in `app.js`.
 
