@@ -1,12 +1,8 @@
-<!-- TODO: add comments -->
 <!DOCTYPE html>
 
-<!-- TODO: add comments -->
 <html>
 
-  <!-- TODO: add comments -->
   <head>
-    <!-- TODO: add comments -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>PUI-NOTE Exercise 6</title>
@@ -21,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet">
 
-    <!-- TODO: add comments -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- We always include our stylesheets last (after the Google Fonts, for
@@ -31,39 +26,31 @@
     <link rel="stylesheet" href="css/notecard.css">
     <link rel="stylesheet" href="css/editor.css">
 
-    <!-- todo: Add note here about server vs just opening index.html
-      (module script) -->
-    <!-- TODO: Add note about defer tag -->
-    <script src="js/app.js" type="module"></script>
+    <!-- Include our multiple JS files -->
+    <script defer src="js/app.js"></script>
+    <script defer src="js/editor.js"></script>
 
   </head>
 
 
-  <!-- TODO: add comments -->
   <body>
 
-    <!-- TODO: add comments -->
     <div id="container">
 
-      <!-- TODO: add comments -->
       <header>
         <img id="logo-img" src="assets/pen-to-square-solid.svg" />
         <h1> PUI-NOTE </h1>
       </header>
 
 
-      <!-- TODO: add comments -->
       <div id="notecard-list">
 
-        <!-- TODO: add comments -->
         <template id="notecard-template">
 
-          <div class="notecard">
+          <div class="notecard expanded">
             
-            <!-- TODO: add comments -->
             <div class="notecard-left">
               
-              <!-- TODO: add comments -->
               <div class="notecard-main-content">
                 <img class="notecard-thumbnail" src="assets/warhol-zebra.png"/>
                 <div class="notecard-text">
@@ -78,7 +65,6 @@
                 </div>
               </div>
 
-               <!-- TODO: add comments -->
               <div class="notecard-footer">
                 Aug 8 2022, 11:09
               </div>
@@ -86,10 +72,8 @@
             </div> <!-- END notecard-left -->
 
 
-             <!-- TODO: add comments -->
             <div class="notecard-right">
 
-               <!-- TODO: add comments -->
               <div class="icon icon-expand material-symbols-outlined">
                 expand_more
               </div>
@@ -97,7 +81,6 @@
                 expand_less
               </div>
 
-               <!-- TODO: add comments -->
               <div class="toolbar">
                 <div class="material-symbols-outlined icon icon-edit">
                   edit
@@ -117,25 +100,19 @@
       </div> <!-- END notecard-list -->
 
 
-      <!-- TODO: add comments -->
       <div id="note-editor" class="">
         
-        <!-- TODO: add comments -->
         <div id="btn-new-note">
         </div>
 
-        <!-- TODO: add comments -->
         <div class="note-editor-contents">
 
-          <!-- TODO: add comments -->
           <div class="note-editor-left">
 
-            <!-- TODO: add comments -->
             <div class="note-editor-img">
               <img id="note-editor-image" src="assets/warhol-tiger.png"></img>
             </div>
 
-            <!-- TODO: add comments -->
             <form>
               <input id="note-editor-title" placeholder="Title of Your Note..."
                 name="dummy" maxlength="50"></input>
@@ -145,7 +122,6 @@
 
           </div>
 
-          <!-- TODO: add comments -->
           <div class="note-editor-right">
             <div class="material-symbols-outlined icon icon-cancel">
               close
