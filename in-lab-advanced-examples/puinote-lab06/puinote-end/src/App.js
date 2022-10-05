@@ -3,13 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 import Notecard from './Notecard';
 import HookExample from './HookExample';
+import Cat from './Cat';
+import CatHook from './CatHook';
 import CategoryList from './CategoryList';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: JSON.parse(localStorage.getItem("categoryList")) || [],
+      categories: JSON.parse(localStorage.getItem("categoryList")) || [
+        {name: "All", color: "black"}
+      ],
       notecardData: JSON.parse(localStorage.getItem("notecardData")) || [],
       selectedNoteIndex: null,
       editorNoteTitle: "",
@@ -193,6 +197,8 @@ class App extends Component {
           <p>Add a New Note</p>
           <button style={buttonStyle} onClick={() => {this.addNote()}}>New</button>
 
+          {/* <Cat />
+          <CatHook /> */}
         </div>
       </div>
     );
