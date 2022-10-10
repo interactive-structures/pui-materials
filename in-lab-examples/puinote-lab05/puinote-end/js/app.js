@@ -35,8 +35,12 @@ function addNewNote(imageURL, title, body) {
 }
 
 function createElement(notecard) {
+  // make a clone of the notecard template
   const template = document.querySelector('#notecard-template');
   const clone = template.content.cloneNode(true);
+  
+  // connect this clone to our notecard.element
+  // from this point we only need to refer to notecard.element
   notecard.element = clone.querySelector('.notecard');
 
   const btnDelete = notecard.element.querySelector('.icon-delete');
@@ -44,25 +48,32 @@ function createElement(notecard) {
   btnDelete.addEventListener('click', () => {
     deleteNote(notecard);
   });
-
+  
+  // add the notecard clone to the DOM
+  // find the notecard parent (#notecard-list) and add our notecard as its child
   const notecardListElement = document.querySelector('#notecard-list');
   notecardListElement.prepend(notecard.element);
-
+  
+  // populate the notecard clone with the actual notecard content
   updateElement(notecard);
 }
 
 function updateElement(notecard) {
+  // get the HTML elements that need updating
   const noteImageElement = notecard.element.querySelector('.notecard-thumbnail');
   const noteTitleElement = notecard.element.querySelector('.note-title');
   const noteBodyElement = notecard.element.querySelector('.note-body');
-
+  
+  // copy our notecard content over to the corresponding HTML elements
   noteImageElement.src = notecard.noteImageURL;
   noteTitleElement.innerText = notecard.noteTitle;
   noteBodyElement.innerText = notecard.noteBody;
 }
 
 function deleteNote(notecard) {
+  // remove the notecard DOM object from the UI
   notecard.element.remove();
+  // remove the actual Notecard object from our set of notecards
   notecardSet.delete(notecard);
 }
 
