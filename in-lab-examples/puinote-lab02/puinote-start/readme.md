@@ -19,9 +19,7 @@ In this lab exercise, we will:
 
 ## Setup
 
-* Clone this repository, so you can access these files locally.
-
-* If you've already forked and cloned the repository, you will need to fetch the latest copy. In Github Desktop, click "Current Branch", and at the bottom of the screen, click "Choose a branch to merge into main". Then select "upstream/main". 
+You can download a zip file with all starter code and assets here: https://tinyurl.com/pui-lab02
 
 
 ## Width, Height, Padding, Margins (Review)

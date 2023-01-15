@@ -11,6 +11,8 @@ In this lab exercise, we will:
 - Understand the CSS box model
 - Apply custom fonts and colors to HTML elements
 
+You can download a zip file with all starter code and assets here: https://tinyurl.com/pui-lab01
+
 
 ## Adding an Element
 
