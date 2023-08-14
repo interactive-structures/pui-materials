@@ -3,7 +3,6 @@ This example is from MDN:
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash
  */
 
-
 const guesses = document.querySelector('.guesses');
 const lastResult = document.querySelector('.lastResult');
 const lowOrHi = document.querySelector('lowOrHi');
