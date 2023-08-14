@@ -1,98 +1,52 @@
-class Editor {
+/***** Note Editor Panel ******************************************************/
 
-  // When we create a new Editor object (see main.js), the "constructor"
-  // function is run. In the constructor, "this" refers to the newly created
-  // Editor object.
-	constructor(notecardSet, editorPanelElement, addFn) {
-	
-    // TODO: add commments
-    this.notecardSet = notecardSet;
-		this.editorPanelElement = editorPanelElement;
-    
-    // TODO: add commments
-    this.addNoteFunction = addFn;
+// Reference to "Note Editor" element that slides up from bottom of screen
+const noteEditorPanel = document.querySelector('#note-editor');
 
-    // TODO: add commments
-		this.editorImageElement = document.querySelector('#note-editor-image');
-		this.editorTitleElement = document.querySelector('#note-editor-title');
-		this.editorBodyElement = document.querySelector('#note-editor-body');
-    
-    // TODO: add commments
-		const btnNewNote = document.querySelector('#btn-new-note');
-		const btnSubmit = document.querySelector('#note-editor .icon-done');
-		const btnCancel = document.querySelector('#note-editor .icon-cancel');
-    
-    // TODO: add commments
-    btnNewNote.onclick = this.startNewNote.bind(this);
-		btnSubmit.onclick = this.submitNote.bind(this);
-		btnCancel.onclick = this.cancelNote.bind(this);
+// Yellow "START A NEW NOTE" button
+const btnStartNewNote = document.querySelector('#btn-new-note');
 
-    // TODO: add commments
-    this.defaultImageURL = 'assets/warhol-zebra.png'
-		
-	}
-  
+// When "START A NEW NOTE" is clicked, we add the 'edit-mode' class to the
+// note editor, which changes the position of the element (it slides up from
+// the bottom of the screen). We also change the animal image in the editor.
+btnStartNewNote.addEventListener('click', () => {
+  noteEditorPanel.classList.add('edit-mode');
+  updateEditorImage();
+});
 
-  // This function is called when the user clicks the yellow "START A NEW NOTE"
-  // button. Right now, it just launches the Note Editor.
-	startNewNote() {
+// When the "X" is clicked in the note editor, we remove the 'edit-mode' class
+// from the note editor panel. The panel will then return to its default
+// position, off-screen.
+const btnCancelNote = document.querySelector('#note-editor .icon-cancel');
+btnCancelNote.addEventListener('click', () => {
+  noteEditorPanel.classList.remove('edit-mode');
+});
 
-    // Display the Note Editor panel, with empty input boxes.
-    this.launchEditor();
-	}
+// When the check-mark is clicked in the note editor, we close the editor panel
+// and call the submitNote() function, which will add a new note.
+const btnSubmitNote = document.querySelector('#note-editor .icon-done');
+btnSubmitNote.addEventListener('click', () => {
+  noteEditorPanel.classList.remove('edit-mode');
+  submitNote();
+});
 
+// When the animal image in the note editor is clicked, we change the animal
+// to the next animal in a predefined sequence (see below).
+const editorImageElement = document.querySelector('#note-editor-image');
+editorImageElement.addEventListener('click', () => {
+  updateEditorImage();
+});
 
-  // This function moves the "Note Editor" panel from the bottom of the screen
-  // to the middle of the screen. If we are editing an existing note, then
-  // the input text boxes are filled with the title and body of the existing
-  // note. If we are creating a new note, then the input text boxes are empty.
-  launchEditor() {
+// Create a pre-defined sequence of animal images to iterate through. These
+// animals serve as thumbnail images for the notecards.
+let animalIndex = 0;
+const animalNames = ['zebra', 'tiger', 'rhino', 'ram', 'orangutan',
+  'frog', 'eagle', 'butterfly'];
 
-    // Choose an animal image to be displayed in the note editor.
-    this.editorImageElement.src = this.defaultImageURL;
-
-    // Since we are starting a new note, make sure that the input text boxes
-    // (note title and note body) are empty.
-    this.editorTitleElement.value = "";
-    this.editorBodyElement.value = "";
-    
-
-    // To display the Note Editor, we grab the HTML element (editorPanelElement)
-    // and add the 'edit-mode' class. The 'edit-mode' class changes the position
-    // of the HTML element, moving it from the bottom of the screen to the
-    // middle of the screen. (See editor.css).
-		this.editorPanelElement.classList.add('edit-mode');
-  }
-
-
-	// This function is called when the user clicks the "done" button in the
-  // Note Editor. Using the data that the user entered, we either create a new
-  // note, or update an existing one.
-	submitNote() {
-
-    // For now, we'll use a dummy timestamp string for the note footer.
-    const timestampString = 'Jan 1 2022 00:00';
-
-    // TODO: add commments
-    this.addNoteFunction(this.editorImageElement.src,
-      this.editorTitleElement.value, this.editorBodyElement.value,
-      timestampString);
-
-
-		// After either adding or editing a notecard, close the Note Editor by
-    // removing the 'edit-mode' class. The Note Editor element will return to
-    // its initial position, at the bottom of the screen.
-		this.editorPanelElement.classList.remove('edit-mode');
-	}
-
-  // TODO: add commments
-	cancelNote() {
-		this.editorPanelElement.classList.remove('edit-mode');
-	}
-  
-
+// In the note editor, change the animal image to the next animal in the
+// sequence above.
+function updateEditorImage() {
+  animalIndex = (animalIndex + 1) % animalNames.length;
+  const animalName = animalNames[animalIndex];
+  editorImageElement.src = 'assets/warhol-' + animalName + '.png';
 }
-
-
-// TODO: add comments
-export { Editor }

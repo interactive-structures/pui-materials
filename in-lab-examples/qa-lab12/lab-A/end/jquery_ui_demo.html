@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<style type="text/css">
+		#container {
+			width: 200px;
+			height: 200px;
+			border: 2px solid black;
+		}
+
+		#child {
+			width: 50px;
+			height: 50px;
+			border: 1px solid blue;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="child"></div>
+	</div>
+</body>
+	<script type="text/javascript">
+		$("#container").resizable({animate : true});
+		$("#child").draggable({containment: "#container"});
+	</script>
+</html>

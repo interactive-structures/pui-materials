@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script defer type="text/javascript">
+		function applyAnimation(name) {
+			$("#cat").removeClass();
+			$("#cat").addClass('animate__animated');
+			$("#cat").addClass('animate__' + name);
+		}
+	</script>
+</head>
+<body>
+	<img id="cat" src="sad_cat.webp">
+	<button onclick="applyAnimation('heartBeat');">Heart beat</button>
+	<button onclick="applyAnimation('headShake');">Head shake</button>
+</body>
+</html>
