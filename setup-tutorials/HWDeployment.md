@@ -6,9 +6,10 @@ For the assignments in this class, you will upload all code to a single reposito
 
 ## Creating your assignment repository
 
-We recommend you start by "forking" the example repository that we've created for you, called `interactive-structures/teach-pui-example`. To do so, go to the [repository page](https://github.com/interactive-structures/teach-pui-example) and click the Fork button in the upper right. You should see a dialog like this:
+We recommend you start by "forking" the example repository that we've created for you, called `interactive-structures/pui-homework-template`. To do so, go to the [repository page](https://github.com/interactive-structures/pui-homework-template) and click the Fork button in the upper right. You should see a dialog like this:
 
-![Screenshot of dialog giving options for forking the homework example repository.](./assets/github-fork.png)
+![Screenshot 1 of dialog giving options for forking the homework example repository.](./assets/github-fork-new-1.png)
+![Screenshot 2 of dialog giving options for forking the homework example repository.](./assets/github-fork-new-2.png)
 
 You might want to change the repository name field to something more descriptive like "pui-hw" or include your name, but it's up to you. (When you're done with this tutorial, your submissions will be visible at a URL like this: `https://<github-username>.github.io/<repo-name>`.) Click **Create Fork.** This will create a copy of the example repository in your account.
 
@@ -16,7 +17,7 @@ You might want to change the repository name field to something more descriptive
 
 Now that you've created a fork, you need to "clone" it to your local computer. To do that, open up GitHub Desktop, the app we downloaded in the GitHub tutorial. On the main app page, click the **Clone a Repository** button or select **File > Clone Repository**. In the menu that appears, you should see the repo you just forked, like this:
 
-![Screenshot of dialog giving options for cloning the homework example repository in GitHub Desktop.](./assets/github-clone.png)
+![Screenshot of dialog giving options for cloning the homework example repository in GitHub Desktop.](./assets/github-clone-new.png)
 
 Select the repo and choose a path to save the files to on your local computer, if you don't want to use the default paths. Then click **Clone**.
 
@@ -26,7 +27,7 @@ The last thing we need to do to make sure we can see your completed assignments 
 
 To do so, go to your repo's page on GitHub (you can click the **View on GitHub** button in GitHub Desktop, or find it from [github.com](https://github.com)). Now find the Settings tab on that page, and then in the sidebar click Pages. You should see a page like this:
 
-![Screenshot of GitHub Pages configuration page.](./assets/github-pages-setup.png)
+![Screenshot of GitHub Pages configuration page.](./assets/github-pages-setup-new.png)
 
 To make your website publicly available, all you need to do is change the **Branch** option from "None" to "main", then click Save. It should look like this:
 
@@ -40,12 +41,12 @@ https://<github-username>.github.io/<repo-name>
 
 **Important:** Take **your** URL and add it to the description of your repository. 
 
-![Screenshot of the published example homework submission page.](./assets/github-pages-url.PNG)
+![Screenshot of the published example homework submission page.](./assets/github-pages-url-new.png)
 
 
 When you go to your URL, you should see the published website!
 
-![Screenshot of the published example homework submission page.](./assets/github-pages-success.png)
+![Screenshot of the published example homework submission page.](./assets/github-pages-success-new.png)
 
 ## Editing, committing, and pushing
 
