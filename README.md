@@ -16,7 +16,7 @@ When you're done setting up your GitHub account and development environment, use
 3. [Homework deployment on GitHub](./setup-tutorials/HWDeployment.md)
 4. [Homework submission on Gradescope](./setup-tutorials/HWSubmission.md)
 
-When you're done, your homework repository will look like [**this example repo**](https://github.com/interactive-structures/teach-pui-example), which is live at [this link](https://interactive-structures.org/teach-pui-example/). You'll be able to add your code to your own repository and have it be visible in your own GitHub Pages site.
+When you're done, your homework repository will look like [**this example repo**](https://github.com/interactive-structures/pui-homework-template), which is live at [this link](https://interactive-structures.org/pui-homework-template/). You'll be able to add your code to your own repository and have it be visible in your own GitHub Pages site.
 
 ## In-class Examples
 
