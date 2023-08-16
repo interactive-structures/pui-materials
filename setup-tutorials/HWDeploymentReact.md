@@ -92,4 +92,19 @@ Now that your changes are committed _locally_, you have to "push" them to GitHub
 
 ![Screenshot of GitHub Desktop showing the Push origin button at the top.](./assets/react-github-desktop-push.png)
 
-You should see the new commits reflected on your published site! Note that only the changes that you've actually committed will be visible, not just any modifications you've made on your local machine. So if you have temporary modifications that don't quite work yet, you can hold off on selecting them for the commit (or you can [commit them to a branch](https://medium.com/@zandra.harner/github-branching-and-merging-using-github-desktop-ba4f7d59fdb9)).
+You should see the new commits reflected on your published site! Note that only the changes that you've actually committed will be visible, not just any modifications you've made on your local machine. So if you have temporary modifications that don't quite work yet, you can hold off on selecting them for the commit (or you can [commit them to a branch](https://medium.com/@zandra.harner/github-branching-and-merging-using-github-desktop-ba4f7d59fdb9)). 
+
+
+## Creating .gitignore 
+
+Open your VS code and create a file named **.gitignore** The purpose of having this file is to have Git to ignore the files listed in .gitignore when tracking changes. 
+Customize the .gitignore file based on the project. Save the .gitignore file located in your root directory. Then add, commit and push the .gitignore file to Git. 
+
+
+```
+git add .gitignore
+git commit "Git add .gitignore"
+git push origin <name of your repository> 
+```
+
+
