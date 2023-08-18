@@ -100,12 +100,11 @@ You should see the new commits reflected on your published site! Note that only 
 
 In your root directory, make sure that you have the  .gitignore, which is automatically created when you create your react app: 
 
-![Screenshot of .gitignore file in the root directory of the project folder] (./assets/react-github-gitignore.png) 
+![Screenshot of gitignore file in the root directory](./assets/react-github-gitignore.png)
 
 Your .gitignore file should have the following text  
 
-![Screenshot of .gitignore file] (./assets/react-github-gitignore_content.png) 
-
+![Screenshot of gitignore file ](./assets/react-github-gitignore_content.png)
 
 When you deploy, make sure that none of the files written in the .gitignore file is in the pushed repo. 
 
