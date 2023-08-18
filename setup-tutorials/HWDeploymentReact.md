@@ -93,3 +93,19 @@ Now that your changes are committed _locally_, you have to "push" them to GitHub
 ![Screenshot of GitHub Desktop showing the Push origin button at the top.](./assets/react-github-desktop-push.png)
 
 You should see the new commits reflected on your published site! Note that only the changes that you've actually committed will be visible, not just any modifications you've made on your local machine. So if you have temporary modifications that don't quite work yet, you can hold off on selecting them for the commit (or you can [commit them to a branch](https://medium.com/@zandra.harner/github-branching-and-merging-using-github-desktop-ba4f7d59fdb9)).
+
+## gitignore 
+
+.gitignore file informs Git which files it should ignore when you are committing and pushing your project. You would want to have Git ignore files that have for example sensitivie information, unnecessary files that do not need to exist in every copy etc. 
+
+In your root directory, make sure that you have the  .gitignore, which is automatically created when you create your react app: 
+
+![Screenshot of .gitignore file in the root directory of the project folder] (./assets/react-github-gitignore.png) 
+
+Your .gitignore file should have the following text  
+
+![Screenshot of .gitignore file] (./assets/react-github-gitignore_content.png) 
+
+
+When you deploy, make sure that none of the files written in the .gitignore file is in the pushed repo. 
+
