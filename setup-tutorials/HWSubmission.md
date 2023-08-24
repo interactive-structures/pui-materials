@@ -74,7 +74,7 @@ Once it’s linked, you can use the dropdown menu to select the repository. If y
 </p>
 
 
-Once you’ve selected the repository, you’ll need to select the branch, you will likely only haven the “master” branch available, so select that.
+Once you’ve selected the repository, you’ll need to select the branch, you will likely only haven the “main” branch available, so select that.
 <p align="center">
   <img width="400" 
   src="./assets/gradescope/select-branch.png"
@@ -92,7 +92,7 @@ Once you set these field identifying the repository, click the “Upload” butt
 </p>
 
 
-After you close that prompt, you may see a screen about an autograder, you can ignore it. However, on this screen you can resubmit if needed (using the “Resubmit” button in the bottom right of the screen). Note, if you make any changes to the files on your Github, you’ll need to resubmit.
+After you close that prompt, you may see a screen about an autograder, you can ignore it. However, on this screen you can resubmit if needed (using the “Resubmit” button in the bottom right of the screen). **Note, if you make any changes to the files on your Github, you’ll need to resubmit.**
 <p align="center">
   <img width="400" 
   src="./assets/gradescope/progress.png"
