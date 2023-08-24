@@ -42,6 +42,8 @@ After entering Gradescope, you will see the assignment names. Click the assignme
 
 ## 2. Connect your GitHub to Gradescope
 
+Additional video tutorial: https://youtu.be/MZshuYucj7A?si=q0ViOIk-i089QC8H
+
 The first time you submit using Gradescope, you’ll be prompted to **connect your Github account**. When you get this prompt, click the “Connect to Github” button:
 <p align="center">
   <img width="400" 
