@@ -11,15 +11,15 @@ We recommend you start by "forking" the example repository that we've created fo
 ![Screenshot 1 of dialog giving options for forking the homework example repository.](./assets/github-fork-new-1.png)
 ![Screenshot 2 of dialog giving options for forking the homework example repository.](./assets/github-fork-new-2.png)
 
-You might want to change the repository name field to something more descriptive like "pui-hw" or include your name, but it's up to you. (When you're done with this tutorial, your submissions will be visible at a URL like this: `https://<github-username>.github.io/<repo-name>`.) Click **Create Fork.** This will create a copy of the example repository in your account.
+You might want to change the repository name field to something more descriptive like "pui-hw" or include your name, but it's up to you. (When you're done with this tutorial, your submissions will be visible at a URL like this: `https://<github-username>.github.io/<repo-name>`.) Click **Create Fork.** This will create a copy of the example repository in your account. 
 
 ## Cloning your repo
 
-Now that you've created a fork, you need to "clone" it to your local computer. To do that, open up GitHub Desktop, the app we downloaded in the GitHub tutorial. On the main app page, click the **Clone a Repository** button or select **File > Clone Repository**. In the menu that appears, you should see the repo you just forked, like this:
+Now that you've created a fork, you need to "clone" it to your local hard-drive on your computer. Cloning means that you (1) download the content of your forked repository and (2) you let git track your changes such that you can synchonize the online repository easily. To do that, open up *GitHub Desktop*, the app we downloaded in the [GitHub tutorial](./GithubSetup.md). On the main app page, click the **Clone a Repository** button or select **File > Clone Repository**. In the menu that appears, you should see the repo you just forked, like this:
 
 ![Screenshot of dialog giving options for cloning the homework example repository in GitHub Desktop.](./assets/github-clone-new.png)
 
-Select the repo and choose a path to save the files to on your local computer, if you don't want to use the default paths. Then click **Clone**.
+Select the repository and choose a folder on your local computer where you want git to download the code to, if you don't want to use the default paths. This will be the folder you work in for your PUI homework assignments. Then click **Clone**.
 
 ## Configuring GitHub Pages
 
@@ -58,7 +58,7 @@ Let's say you complete part of the assignment and you're pretty happy with the r
 
 Be sure that only the files you want to save in this commit are checked in the left sidebar. Then, type a commit message (be descriptive and summarize the changes you made, like "Updated homework text for clarity") and click **Commit to main**.
 
-Now that your changes are committed _locally_, you have to "push" them to GitHub, where they will show on your published website. To push, simply press the **Push origin** button, either at the top of the GitHub Desktop page or the blue one (both buttons do exactly the same):
+Now that your changes are committed _locally_ (i.e. they are only on your computer), you have to "push" (i.e., upload) them to GitHub, where they will show on your published website. To push, simply press the **Push origin** button, either at the top of the GitHub Desktop page or the blue one (both buttons do exactly the same):
 
 ![Screenshot of GitHub Desktop showing the Push origin button at the top.](./assets/github-desktop-push.png)
 
