@@ -96,3 +96,5 @@ For example, the top panel shows "Elements", which is an interactive depiction o
 
 
 The Developer Tools have a ton of useful features. There's detailed documentation on all of its features [here](https://developer.chrome.com/docs/devtools/), which you might find useful along your web dev journey.
+
+We have also created a short **video overview** for you showing the Chrome Developer tools: https://youtu.be/uXDf_1FRqdk?si=2QNPuh1znANPg2U0
