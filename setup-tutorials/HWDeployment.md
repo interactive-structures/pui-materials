@@ -6,6 +6,8 @@ For the assignments in this class, you will upload all code to a single reposito
 
 ## Creating your assignment repository
 
+We have prepared a **Video Tutorial** for this conent as well: https://youtu.be/okINPJAZw6s?si=GDjOscworM3dzVPF 
+
 We recommend you start by "forking" the example repository that we've created for you, called `interactive-structures/pui-homework-template`. To do so, go to the [repository page](https://github.com/interactive-structures/pui-homework-template) and click the Fork button in the upper right. You should see a dialog like this:
 
 ![Screenshot 1 of dialog giving options for forking the homework example repository.](./assets/github-fork-new-1.png)
@@ -22,6 +24,8 @@ Now that you've created a fork, you need to "clone" it to your local hard-drive 
 Select the repository and choose a folder on your local computer where you want git to download the code to, if you don't want to use the default paths. This will be the folder you work in for your PUI homework assignments. Then click **Clone**.
 
 ## Configuring GitHub Pages
+
+We have prepared a **Video Tutorial** for this conent as well: https://youtu.be/OEPAOjA8vNA?si=JIfOsyLVHEvMiqI7
 
 The last thing we need to do to make sure we can see your completed assignments is to set up GitHub Pages. Remember how your browser needs a server to send it the contents of your webpage? Well, GitHub can act as the server for the code in your repo - but we need to enable that feature first.
 
@@ -49,6 +53,8 @@ When you go to your URL, you should see the published website!
 ![Screenshot of the published example homework submission page.](./assets/github-pages-success-new.png)
 
 ## Editing, committing, and pushing
+
+Video tutorial for this next part: https://youtu.be/AZZ1HqMGQAo?si=gcP6ClQelfcc0-s4
 
 You can open up your repo in VS Code and edit it - you can either find it by opening up VS Code and browsing for the directory, or press the **Open in Visual Studio Code** button on the repo page in GitHub Desktop.
 
