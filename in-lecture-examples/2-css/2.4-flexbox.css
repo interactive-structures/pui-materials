@@ -1,0 +1,45 @@
+/* show on website*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600;900&display=swap');
+
+
+article {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+article > div {
+    width: 50%;
+}
+
+.article-media video {
+    min-width: 200px;
+    max-width: 100%;
+}
+
+.article-description {
+    padding-right: 20px;
+}
+
+#greeting {
+    font-size: 28px;
+    font-style: italic;
+}
+
+#about-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+#about-image {
+    flex: 1 1 30%;
+}
+#about-image img {
+    width: 100%;
+    min-width: 100px;
+}
+
+#about-description {
+    flex: 70%;
+    padding-left: 20px;
+}
