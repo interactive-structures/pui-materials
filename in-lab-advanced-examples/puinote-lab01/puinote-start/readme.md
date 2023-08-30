@@ -1,6 +1,6 @@
 # Lab Exercise 01
 
-Over the next six lab sessions, we will be developing a "sticky-note" application, as seen <a href="https://interactive-structures.org/teach-pui/in-lab-examples/puinote-complete/">here</a>. Today, we will focus on creating a simple layout for one of the "notecard" elements:
+Over the next six lab sessions, we will be developing a "sticky-note" application, as seen <a href="https://interactive-structures.org/pui-materials/in-lab-examples/puinote-complete/">here</a>. Today, we will focus on creating a simple layout for one of the "notecard" elements:
 
 <img src="_readme_imgs/lab01-complete.png">
 
