@@ -2,7 +2,7 @@
 
 Continuing with our development of a "sticky-note" application:
 
-Last week, we created a simple notecard element for a ["sticky-note" application](https://interactive-structures.org/teach-pui/in-lab-examples/puinote-complete/). The element looked like this:
+Last week, we created a simple notecard element for a ["sticky-note" application](https://interactive-structures.org/pui-materials/in-lab-examples/puinote-complete/). The element looked like this:
 
 ![notecard layout from exercise 1, elements arranged vertically](./_readme_imgs/old-layout.png)
 
