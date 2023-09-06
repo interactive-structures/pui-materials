@@ -17,7 +17,7 @@ You can download a zip file with all starter code and assets here: https://tinyu
 
 **Our task:** The user should be able to type a note title and note body in the text boxes onscreen. When they click the "check" button at the bottom of the page, the notecard element should update with the new title and body text.
 
-**See it live:** https://interactive-structures.org/teach-pui/in-lab-examples/puinote-lab03/puinote-end/
+**See it live:** https://interactive-structures.org/pui-materials/in-lab-examples/puinote-lab03/puinote-end/
 
 ---
 

@@ -265,7 +265,7 @@ Play around with different `width` and `height` values and take note of how the 
 
 ## BONUS: Button with Hover Effect
 
-Let's add a "delete note" button to the bottom of our notecard. (Example <a href="https://interactive-structures.org/teach-pui/in-lab-examples/puinote-lab01/puinote-end/">here</a>). At the moment, it won't do anything when clicked, but we'd like it to change color when the user hovers over it.
+Let's add a "delete note" button to the bottom of our notecard. (Example <a href="https://interactive-structures.org/pui-materials/in-lab-examples/puinote-lab01/puinote-end/">here</a>). At the moment, it won't do anything when clicked, but we'd like it to change color when the user hovers over it.
 
 25. Start by adding the button element in `index.html`, as a child of our `notecard` element:
 

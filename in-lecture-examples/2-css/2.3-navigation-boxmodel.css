@@ -1,0 +1,38 @@
+
+/* TURN OFF "2.2-links.css" */
+
+
+/* Style for general links */
+a {
+    color: black;
+    text-decoration: none;
+    border-bottom: black solid 1px;
+}
+
+a:hover {
+    font-weight: 600;
+    border-bottom: aqua solid 3px;
+}
+
+a:active {
+    background-color: aqua;
+}
+
+
+
+/* Navigation link styles */
+nav {
+    border-bottom: #EEEEEE solid 1px;
+}
+
+/* can also use  "nav > a" here */
+nav a {
+    background-color: #dddddd;
+    border: none;
+    margin: 2px 10px;
+    padding: 0px 8px;
+}
+
+nav a:hover {
+    border: aqua 5px solid;
+}

@@ -1,15 +1,21 @@
-/* show on website*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600;900&display=swap');
 
+/* Simple link styles */
 a {
     color: black;
-    text-decoration: none;
-    border-bottom: black solid 1px;
 }
 
 a:hover {
-    border-bottom: aqua solid 3px;
+    font-weight: 600;
 }
 a:active {
-    background-color: aqua;
+    color: aqua;
+}
+
+
+/* Different navigation link style */
+
+nav a {
+    font-weight: 900;
+    font-size: 150%;
+    display: block;
 }
