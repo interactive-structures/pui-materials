@@ -1,17 +1,41 @@
-/* show on website*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;600;900&display=swap');
 
 
-article {
+/* TURN OFF "2.3-navigation-boxmodel.css" */
+
+nav {
+    border-bottom: #EEEEEE solid 1px;
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+nav > a {
+    border: none;
+    margin: 10px;
+    padding: 2px 8px;
+}
+
+nav > a:hover {
+    border: none;
+}
+
+
+/* Article layout */
+
+/* set the parent container to be a flexbox with row layout */
+article {
+    display: flex; 
     flex-direction: row;
     margin-bottom: 30px;
 }
 
+/* set the basis width of the two children to be 50% */
 article > div {
-    width: 50%;
+    flex-basis: 50%;
 }
 
+/* the video element within the flexbox children should be at least 200px */
 .article-media video {
     min-width: 200px;
     max-width: 100%;
@@ -21,18 +45,22 @@ article > div {
     padding-right: 20px;
 }
 
-#greeting {
+
+/* About me layout */
+
+/* already defined in typography example */
+/* #greeting {
     font-size: 28px;
     font-style: italic;
-}
+} */
 
 #about-content {
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* vertical alignment of the children (cross axis) */
 }
 
 #about-image {
-    flex: 1 1 30%;
+    flex-basis: 30%;
 }
 #about-image img {
     width: 100%;
