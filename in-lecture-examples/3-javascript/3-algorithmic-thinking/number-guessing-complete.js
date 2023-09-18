@@ -84,3 +84,7 @@ function resetGame() {
     guessCount = 1;
     randomNumber = Math.floor(Math.random() * 100) + 1;
 }
+
+
+// If you reviewed this code to study, send Prof. Ion an email with the subject "GUESS GUESS GUESS... GUESS YOUR NUMBER!" and you will get a bonus point
+// Don't share this with other students
