@@ -1,0 +1,41 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+}
+
+.form input[type="number"] {
+    width: 200px;
+}
+
+.lastResult {
+    padding: 3px;
+}
+
+.guessHigh {
+    background-color: blue;
+    color: white;
+}
+
+.guessLow {
+    background-color: yellow;
+    color: black;
+}
+
+.guessCorrect {
+    background-color: greenyellow;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.gameOver {
+    background-color: black;
+    color: white;
+    padding: 5px;
+}

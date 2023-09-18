@@ -1,12 +1,13 @@
 // references to HTML elements
 const guessSubmit = document.querySelector('.guessSubmit');
-guessSubmit.addeventListener('click', checkGuess);
+guessSubmit.addEventListener('click', checkGuess);
 
 const guesses = document.querySelector('.guesses');
 const guessField = document.querySelector('.guessField');
 const lastResult = document.querySelector('.lastResult');
-const lowOrHi = document.querySelector('lowOrHi');
+const lowOrHi = document.querySelector('.lowOrHi');
 
+// <-- 
 // variables for the game
 let randomNumber;
 let guessCount;
@@ -14,16 +15,17 @@ let resetButton;
 
 //initialize the game
 resetGame();
+// -->
 
 function checkGuess() {
-    let userGuess = Number(guessField.value);
+    const userGuess = Number(guessField.value);
     guesses.textContent += userGuess + ' ';
 
     lowOrHi.classList.remove("guessHigh");
     lowOrHi.classList.remove("guessLow");
     lowOrHi.textContent = "";
 
-    if (userGuess = randomNumber) {
+    if (userGuess === randomNumber) {
         lastResult.textContent = "Congratulations! You got it right!";
         lastResult.classList.add("guessCorrect");
         setGameOver();
@@ -60,6 +62,8 @@ function setGameOver() {
 }
 
 function resetGame() {
+    // <--
+
     //remove reset button
     if(resetButton)
         resetButton.parentNode.removeChild(resetButton);
@@ -82,5 +86,7 @@ function resetGame() {
 
     //reset counters and random number
     guessCount = 1;
-    randomNumber = Math.floor(Math.random()) + 1;
+    randomNumber = Math.floor(Math.random() * 100) + 1;
+
+    // -->
 }

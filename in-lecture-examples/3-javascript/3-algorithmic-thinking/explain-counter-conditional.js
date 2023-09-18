@@ -4,8 +4,8 @@ function checkGuess() {
     const userGuess = Number(guessField.value); 
     
     /* after 1st submit click: guessCount = 1 */
-    /* after 2nd  submit click: guessCount = 2 */
-    /* after 3rd  submit click: guessCount = 3 */
+    /* after 2nd submit click: guessCount = 2 */
+    /* after 3rd submit click: guessCount = 3 */
     /* etc */
     /*
          ... so after the 10th click, which is the 10th time the user guessed a number, this guess is still evaluated if it is correct in [if (userGuess === randomNumber)]. 
