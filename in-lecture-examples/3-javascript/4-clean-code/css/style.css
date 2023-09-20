@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
 }
 
-.form input[type="number"] {
+.guessField {
   width: 200px;
 }
 
