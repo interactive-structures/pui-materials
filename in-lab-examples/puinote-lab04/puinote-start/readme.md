@@ -4,7 +4,7 @@
 
 Zip file here: https://tinyurl.com/pui-lab5
 
-This week, we will give users the ability to *delete* notes from our note-taking application (by clicking on the trash can icon). See an example here: https://interactive-structures.org/teach-pui/in-lab-examples/puinote-lab04/puinote-end/
+This week, we will give users the ability to *delete* notes from our note-taking application (by clicking on the trash can icon). See an example here: https://interactive-structures.org/pui-materials/in-lab-examples/puinote-lab04/puinote-end/
 
 In this lab exercise, we will:
 - Create a JavaScript `class` that represents a generic notecard, and allows us to make multiple notecards
