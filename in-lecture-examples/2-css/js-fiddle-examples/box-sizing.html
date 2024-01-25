@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- load into jsfiddle and play around with flexbox -->
+  <title>Hello world</title>
+  <style>
+    /* try both content-box and border-box and observe the difference as you play with borders and padding */ 
+    * {
+      box-sizing: content-box;
+      /* box-sizing: border-box; */
+    }
+
+    #container {
+      height: 300px;
+      width: 300px;
+      background-color: red;
+      border: 1px solid black;
+    }
+
+    .content {
+      height: 100px;
+      width:100px;
+      background-color: blue;
+      padding: 5px;
+      border: 1px dashed white;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div id="container">
+      <div id="c1" class="content">
+        Content 1
+      </div>
+      <div id="c2" class="content">
+        Content 2
+      </div>
+      <div id="c3" class="content">
+        Content 3
+      </div>
+    </div>
+  </main>
+</body>
