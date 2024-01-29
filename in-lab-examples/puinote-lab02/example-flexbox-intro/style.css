@@ -2,14 +2,22 @@ body {
   font-family: sans-serif;
 }
 
-.row {
+.big_container {
   width: 500px;
   background-color: lightgray;
 }
 
-.row div {
+.big_container div {
   width: 100px;
   background-color: steelblue;
+  color: white;
+  margin: 8px;
+  padding: 8px;
+}
+
+.small_container p {
+  width: 50px;
+  background-color: darkgrey;
   color: white;
   margin: 8px;
   padding: 8px;
