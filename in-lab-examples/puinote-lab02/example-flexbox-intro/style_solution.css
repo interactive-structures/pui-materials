@@ -1,5 +1,6 @@
 .row {
   display: flex;
-  align-content: flex-start;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
 }
