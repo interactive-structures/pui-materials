@@ -86,5 +86,5 @@ function resetGame() {
 }
 
 
-// If you reviewed this code to study, send Prof. Ion an email with the subject "GUESS GUESS GUESS... GUESS YOUR NUMBER!" and you will get a bonus point
+// If you reviewed this code to study, send Prof. Das an email with the subject "GUESS GUESS GUESS... GUESS YOUR NUMBER!" and you will get a bonus point
 // Don't share this with other students
