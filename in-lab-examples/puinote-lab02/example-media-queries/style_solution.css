@@ -12,15 +12,15 @@
   }
 }
 
-.container {
+/* hide items in a small screen */
+/* .container {
   width: 100%;
   display: flex;
   justify-content: space-between;
-}
+} */
 
 /* @media only screen and (max-width: 600px) {
   .column.responsive {
     display: none;
   }
 } */
-

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- load into jsfiddle and play around with flexbox -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    #container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      width: 500px;
+      height: 500px;
+      background: red;
+      border: 1px solid black;
+    }
+
+    #sc1 {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+
+      width: 250px;
+    }
+
+    #sc2 {
+      width: 250px;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+
+      border: 1px dashed white;
+      height: 100%;
+      color: white;
+      background: blue;
+      padding: 10px;
+    }
+  </style>
+  <title>Hello world</title>
+</head>
+
+<body>
+  <main>
+    <div id="container">
+      <div id="sc1">
+        <div id="c1" class="content">
+          Content 1
+        </div>
+        <div id="c2" class="content">
+          Content 2
+        </div>
+        <div id="c3" class="content">
+          Content 3
+        </div>
+      </div>
+      <div id="sc2">
+        <div id="c4" class="content">
+          Content 4
+        </div>
+      </div>
+    </div>
+  </main>
+</body>

@@ -1,0 +1,37 @@
+body {
+  font-family: sans-serif;
+}
+
+.big_container {
+  width: 500px;
+  background-color: lightgray;
+
+  /* solution */
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: flex-end;
+}
+
+/* solution */
+.small_container {
+  display: flex; 
+  flex-direction: column;
+}
+
+
+.big_container div {
+  width: 100px;
+  background-color: steelblue;
+  color: white;
+  margin: 8px;
+  padding: 8px;
+}
+
+.small_container p {
+  width: 50px;
+  background-color: darkgrey;
+  color: black;
+  margin: 8px;
+  padding: 8px;
+}
