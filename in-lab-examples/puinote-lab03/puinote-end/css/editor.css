@@ -1,6 +1,4 @@
 /* ---------- NOTE EDITOR PANEL --------------------------------------------- */
-
-/* TODO: Add comments */
 #note-editor {
 
   position: fixed;
@@ -16,27 +14,19 @@
   transition-duration: 500ms;    
 }
 
-
-/* TODO: Add comments */
 #note-editor.edit-mode {
   bottom: 0px;
 }
 
-
-/* TODO: Add comments */
 .note-editor-contents {
   margin-top: 20px;
   display: flex;
 }
 
-
-/* TODO: Add comments */
 .note-editor-left {
   width: 350px;
 }
 
-
-/* TODO: Add comments */
 .note-editor-right {
   flex-shrink: 0;
   margin-left: 20px;
@@ -47,8 +37,6 @@
 
 
 /* ---------- "START A NEW NOTE" BUTTON ------------------------------------- */
-
-/* TODO: Add comments */
 #btn-new-note {
   display: flex;
   align-items: center;
@@ -69,31 +57,24 @@
   top: -20px;
 }
 
-/* TODO: Add comments */
 #note-editor.edit-mode #btn-new-note {
   pointer-events: none;
 }
 
-/* TODO: Add comments */
 #btn-new-note::before {
   content: "START A NEW NOTE"
 }
 
-/* TODO: Add comments */
 #note-editor.edit-mode #btn-new-note::before {
   content: "EDIT NOTE";
 }
 
 
 /* ---------- TEXT INPUT AREAS ---------------------------------------------- */
-
-/* TODO: Add comments */
 #note-editor input,textarea {
   margin-top: 14px;
 }
 
-
-/* TODO: Add comments */
 input {
   background-color: #212121;
   border: none;
@@ -112,8 +93,6 @@ input {
 
 }
 
-
-/* TODO: Add comments */
 input:focus {
   background-color: gold;
   background-color: #34242f;
@@ -121,8 +100,6 @@ input:focus {
   outline: none;
 }
 
-
-/* TODO: Add comments */
 textarea {
   background-color: #212121;
   border: none;
@@ -142,8 +119,6 @@ textarea {
 
 }
 
-
-/* TODO: Add comments */
 textarea:focus {
   background-color: gold;
   background-color: #34242f;
@@ -152,8 +127,6 @@ textarea:focus {
 
 
 /* ---------- SUBMIT AND CANCEL ICONS --------------------------------------- */
-
-/* TODO: Add comments */
 #note-editor .icon {
   margin-top: 20px;
   font-weight: 600;
