@@ -24,14 +24,15 @@
     <link rel="stylesheet" href="css/notecard.css">
     <link rel="stylesheet" href="css/editor.css">
 
-    <!-- Add external JS file -->
+    <!-- Noted: defer attribute specifies that the script should be downloaded but 
+      executed after the HTML document has been parsed -->
     <script defer src="js/app.js"></script>
 
   </head>
 
 
   <body>
-
+    <!-- #container div holds all of elements -->
     <div id="container">
 
       <header>
@@ -39,13 +40,14 @@
         <h1> PUI-NOTE </h1>
       </header>
 
-
+      <!-- #notecard-list contains all of our notecards. -->
       <div id="notecard-list">
 
-        <div class="notecard expanded" id="notecard-one">
+        <!-- One notecard -->
+        <div class="notecard expanded" id="notecard-one">     
           
           <div class="notecard-left">
-            
+
             <div class="notecard-main-content">
               <img class="notecard-thumbnail" src="assets/warhol-zebra.png"/>
               <div class="notecard-text">
@@ -63,12 +65,9 @@
             <div class="notecard-footer">
               Aug 8 2022, 11:09
             </div>
-
           </div> <!-- END notecard-left -->
 
-
           <div class="notecard-right">
-
             <div class="icon icon-expand material-symbols-outlined">
               expand_more
             </div>
@@ -85,14 +84,10 @@
               </div>
             </div>
           </div> <!-- END notecard-right -->
-
-
         </div> <!-- END notecard -->
-
-
       </div> <!-- END notecard-list -->
 
-
+      <!-- Note editor -->
       <div id="note-editor" class="edit-mode">
         
         <div id="btn-new-note">
@@ -101,14 +96,12 @@
         <div class="note-editor-contents">
 
           <div class="note-editor-left">
-
             <form>
               <input id="note-editor-title" placeholder="Title of Your Note..."
                 name="dummy" maxlength="50"></input>
               <textarea id="note-editor-body" placeholder="Body of Your Note..."
                 rows="15" maxlength="1000"></textarea>
             </form>
-
           </div>
 
           <div class="note-editor-right">
@@ -118,12 +111,7 @@
           </div>
 
         </div> <!-- END note-editor-contents -->
-
       </div> <!-- END note-editor -->
-
-
     </div> <!-- END container -->
-
-
   </body>
 </html>
