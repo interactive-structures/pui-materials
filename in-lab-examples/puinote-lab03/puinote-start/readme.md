@@ -78,7 +78,7 @@ Let's practice by using JavaScript to change the zebra image to something else.
 9. In the `updateElement()` function, use `document.querySelector` to select an HTML element with the CSS class `.notecard-thumbnail`:
 
 ```
-const noteImageElement = documennt.querySelector('.notecard-thumbnail');
+const noteImageElement = document.querySelector('.notecard-thumbnail');
 console.log(noteImageElement);
 ```
 
