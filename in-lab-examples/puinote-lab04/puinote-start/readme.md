@@ -2,8 +2,6 @@
 
 ## Introduction
 
-Zip file here: https://tinyurl.com/pui-lab5
-
 This week, we will give users the ability to *delete* notes from our note-taking application (by clicking on the trash can icon). See an example here: https://interactive-structures.org/pui-materials/in-lab-examples/puinote-lab04/puinote-end/
 
 In this lab exercise, we will:
@@ -16,9 +14,7 @@ In this lab exercise, we will:
 
 ## Setup and Recap (Accessing DOM Elements)
 
-1. Download the starter code here: 
-
-2. Let's familiarize ourselves with some relevant elements and classes that are used in this application. (It's a good idea to view each of these elements in the developer console by right-clicking and selecting "Inspect").
+1. Let's familiarize ourselves with some relevant elements and classes that are used in this application. (It's a good idea to view each of these elements in the developer console by right-clicking and selecting "Inspect").
 
     - The `.notecard` class refers to our notecard element. Currently, there are three of them on the page. Each notecard has a unique ID (`#notecard-one`, `#notecard-two`, `#notecard-three`). Inside each notecard, we have:
 
@@ -29,13 +25,13 @@ In this lab exercise, we will:
 
     - There are also three icons in the sidebar of each notecard. For now, we are only concerned with the trash can, which has the class `.icon-delete`.
 
-3. Recap: How do we access these elements using JavaScript? In the console, use `querySelector` find the second notecard.
+2. Recap: How do we access these elements using JavaScript? In the console, use `querySelector` find the second notecard.
 
 ```
 document.querySelector('#notecard-two');
 ```
 
-4. Recap: How would we access the title text of the second note card?
+3. Recap: How would we access the title text of the second note card?
 
 ```
 // Method One:
@@ -46,7 +42,7 @@ const notecardTwo = document.querySelector('#notecard-two');
 notecardTwo.querySelector('.note-title')
 ```
 
-5. Recap: How would we access the trash can icon of the third note card?
+4. Recap: How would we access the trash can icon of the third note card?
 
 ```
 // Method One:
