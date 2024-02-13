@@ -9,13 +9,20 @@ class Car {
     this.model = model;
     this.year = year;
     this.element = element;
+
+    const btnDrive = this.element.querySelector('.btnDrive');
+    const btnBrake = this.element.querySelector('.btnBrake');
+
+    btnDrive.onclick = this.drive.bind(this);
+	  btnBrake.onclick = this.brake.bind(this);
   }
 
   updateElement() {
-    this.element.innerText = this.model + ' ' + this.year;
+    let carNameElement = this.element.querySelector('p');
+    carNameElement.innerText = this.model + ' ' + this.year;
     if (this.isMoving) {
       this.element.classList.add('moving-car');
-      this.element.innerText += ' is driving.';
+      carNameElement.innerText += ' is driving.';
     } else {
       this.element.classList.remove('moving-car');
     }
