@@ -37,7 +37,7 @@ for (const image of images) {
     //listen to when the thumbnail is clicked, then excecute the function "onThumbnailClick()"
     thumbnailImage.addEventListener('click', onThumbnailClick);
 
-    // If you reviewed this code, send Prof. Ion an email with the subject "IMAGE GALLERY FTW!" and you will get a bonus point
+    // If you reviewed this code, send Prof. Das an email with the subject "IMAGE GALLERY FTW!" and you will get a bonus point
     // Don't share this with other students
 }
 

@@ -13,7 +13,7 @@ In this lab exercise, we will:
 
 ## Setup
 
-You can download a zip file with all starter code and assets here: https://tinyurl.com/pui-lab03
+You can download a zip file with all starter code and assets here: https://drive.google.com/file/d/1u2Rple9pzGwfws_3rsumQvmE0w-KomAy/view?usp=drive_link 
 
 **Our task:** The user should be able to type a note title and note body in the text boxes onscreen. When they click the "check" button at the bottom of the page, the notecard element should update with the new title and body text.
 
@@ -78,7 +78,7 @@ Let's practice by using JavaScript to change the zebra image to something else.
 9. In the `updateElement()` function, use `document.querySelector` to select an HTML element with the CSS class `.notecard-thumbnail`:
 
 ```
-const noteImageElement = documennt.querySelector('.notecard-thumbnail');
+const noteImageElement = document.querySelector('.notecard-thumbnail');
 console.log(noteImageElement);
 ```
 

@@ -1,0 +1,138 @@
+<head>
+  <!-- load into jsfiddle and play around with flexbox -->
+  <title>Hello world</title>
+  <style>
+      * {
+      box-sizing: border-box;
+    }
+
+    #main {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 10px;
+    }
+    
+    #buttons {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 10px;
+    }
+    
+    #container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      width: 500px;
+      height: 500px;
+      background: red;
+      border: 1px solid black;
+    }
+
+    #sc1 {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+
+      width: 250px;
+    }
+
+    #sc2 {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 250px;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+
+      border: 1px dashed white;
+      height: 100%;
+      color: white;
+      background: blue;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div id="main">
+      <div id="container">
+        <div id="sc1">
+          <div id="c1" class="content">
+            Content 1
+          </div>
+          <div id="c2" class="content">
+            Content 2
+          </div>
+          <div id="c3" class="content">
+            Content 3
+          </div>
+        </div>
+        <div id="sc2">
+          <div id="c4" class="content">
+            Content 4
+          </div>
+        </div>
+      </div>
+      <div id="buttons">
+        <button id="columns">
+          Columns
+        </button>
+        <button id="rows">
+          Rows
+        </button>
+        <button id="add">
+          Add container
+        </button>
+        <button id="remove">
+          Remove container
+        </button>
+      </div>
+    </div>
+  </main>
+  <script>
+    const columns = document.querySelector("#columns");
+      const rows = document.querySelector("#rows");
+      const add = document.querySelector("#add");
+      const remove = document.querySelector("#remove");
+
+      columns.onclick = function (e) {
+        const element = document.querySelector("#sc1");
+        console.log(element);
+        element.style.flexDirection = 'column';
+      };
+
+      rows.onclick = function (e) {
+        const element = document.querySelector("#sc1");
+        console.log(element);
+        element.style.flexDirection = 'row';
+      };
+
+      function fn_add(e) {
+        const container = document.querySelector("#sc2");
+        const element = document.createElement("div");
+        element.classList.add("content");
+        element.innerText = "New content";
+        container.appendChild(element);
+      };
+
+      function fn_remove(e) {
+        const container = document.querySelector("#sc2");
+        const element = container.querySelector(".content");
+        element.remove();
+      }
+
+      function fn_removeAllButOne(e) {
+        const elements = container.querySelectorAll("#sc2 .content");
+        for (let i = 0; i < elements.length - 1; i++) {
+          elements[i].remove();
+        }
+      }
+
+      add.onclick = fn_add;
+      remove.onclick = fn_removeAllButOne;
+  </script>
+</body>
